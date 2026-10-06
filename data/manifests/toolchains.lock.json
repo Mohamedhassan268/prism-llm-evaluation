@@ -1,0 +1,33 @@
+{
+  "image_id": "sha256:26226bd7503f0b9ebcebdf31c8421f8b0ada39453acc0be9f55e468c9d5ae73a",
+  "image_size": 1601811674,
+  "base_images": {
+    "PYTHON_IMAGE": "python@sha256:a36c24f9cbdf4fd0f52d67f0823eeac19c2028c637cecc392d97f980d4fec56b",
+    "JAVA_IMAGE": "eclipse-temurin@sha256:e91949a2cd31239b0dc3ab115d441fe488fae0794d1763e9ec34ab4dd7113e67",
+    "GO_IMAGE": "golang@sha256:2fdfcb03b1445f06f1cf8a342516bfd34026b527fef8427f40ea7b140168fda2"
+  },
+  "docker_prefix": [
+    "wsl",
+    "-d",
+    "Ubuntu",
+    "-u",
+    "root",
+    "--",
+    "docker"
+  ],
+  "toolchains": {
+    "python3": "Python 3.11.16\n",
+    "gcc": "gcc (Debian 12.2.0-14+deb12u1) 12.2.0\nCopyright (C) 2022 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+    "g++": "g++ (Debian 12.2.0-14+deb12u1) 12.2.0\nCopyright (C) 2022 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+    "go": "go version go1.19.13 linux/amd64\n",
+    "java": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment Temurin-11.0.32.1+1 (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM Temurin-11.0.32.1+1 (build 11.0.32.1+1, mixed mode, sharing)\n"
+  },
+  "authors_versions": {
+    "python": "3.11",
+    "gcc": "12",
+    "g++": "12",
+    "go": "1.19",
+    "openjdk": "11"
+  },
+  "compatibility": "Major/minor lines follow paper; patch/vendor/build differences recorded."
+}

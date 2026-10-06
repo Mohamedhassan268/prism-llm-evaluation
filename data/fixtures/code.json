@@ -1,0 +1,156 @@
+[
+  {
+    "id": "correct-Python",
+    "source_code": "a,b=map(int,input().split()); print(a+b)\n",
+    "source_language": "Python",
+    "target_language": "Python",
+    "raw_output": "a,b=map(int,input().split()); print(a+b)\n",
+    "original_tests": [
+      {
+        "input": "1 2\n",
+        "expected": "3\n"
+      }
+    ],
+    "data_kind": "controlled_fixture"
+  },
+  {
+    "id": "correct-C",
+    "source_code": "a,b=map(int,input().split()); print(a+b)\n",
+    "source_language": "Python",
+    "target_language": "C",
+    "raw_output": "#include <stdio.h>\nint main(){int a,b;scanf(\"%d%d\",&a,&b);printf(\"%d\\n\",a+b);}\n",
+    "original_tests": [
+      {
+        "input": "1 2\n",
+        "expected": "3\n"
+      }
+    ],
+    "data_kind": "controlled_fixture"
+  },
+  {
+    "id": "correct-C++",
+    "source_code": "a,b=map(int,input().split()); print(a+b)\n",
+    "source_language": "Python",
+    "target_language": "C++",
+    "raw_output": "#include <iostream>\nint main(){int a,b;std::cin>>a>>b;std::cout<<a+b<<\"\\n\";}\n",
+    "original_tests": [
+      {
+        "input": "1 2\n",
+        "expected": "3\n"
+      }
+    ],
+    "data_kind": "controlled_fixture"
+  },
+  {
+    "id": "correct-Go",
+    "source_code": "a,b=map(int,input().split()); print(a+b)\n",
+    "source_language": "Python",
+    "target_language": "Go",
+    "raw_output": "package main\nimport \"fmt\"\nfunc main(){var a,b int;fmt.Scan(&a,&b);fmt.Println(a+b)}\n",
+    "original_tests": [
+      {
+        "input": "1 2\n",
+        "expected": "3\n"
+      }
+    ],
+    "data_kind": "controlled_fixture"
+  },
+  {
+    "id": "correct-Java",
+    "source_code": "a,b=map(int,input().split()); print(a+b)\n",
+    "source_language": "Python",
+    "target_language": "Java",
+    "raw_output": "import java.util.Scanner;public class Main{public static void main(String[]x){Scanner s=new Scanner(System.in);int a=s.nextInt(),b=s.nextInt();System.out.println(a+b);}}\n",
+    "original_tests": [
+      {
+        "input": "1 2\n",
+        "expected": "3\n"
+      }
+    ],
+    "data_kind": "controlled_fixture"
+  },
+  {
+    "id": "constant",
+    "source_code": "a,b=map(int,input().split()); print(a+b)\n",
+    "source_language": "Python",
+    "target_language": "Python",
+    "raw_output": "print(3)\n",
+    "original_tests": [
+      {
+        "input": "1 2\n",
+        "expected": "3\n"
+      }
+    ],
+    "data_kind": "controlled_fixture"
+  },
+  {
+    "id": "off-by-one",
+    "source_code": "a,b=map(int,input().split()); print(a+b)\n",
+    "source_language": "Python",
+    "target_language": "Python",
+    "raw_output": "a,b=map(int,input().split()); print(a+b if a==1 else a+b+1)\n",
+    "original_tests": [
+      {
+        "input": "1 2\n",
+        "expected": "3\n"
+      }
+    ],
+    "data_kind": "controlled_fixture"
+  },
+  {
+    "id": "crash",
+    "source_code": "a,b=map(int,input().split()); print(a+b)\n",
+    "source_language": "Python",
+    "target_language": "Python",
+    "raw_output": "raise RuntimeError(\"controlled crash\")\n",
+    "original_tests": [
+      {
+        "input": "1 2\n",
+        "expected": "3\n"
+      }
+    ],
+    "data_kind": "controlled_fixture"
+  },
+  {
+    "id": "timeout",
+    "source_code": "a,b=map(int,input().split()); print(a+b)\n",
+    "source_language": "Python",
+    "target_language": "Python",
+    "raw_output": "while True: pass\n",
+    "original_tests": [
+      {
+        "input": "1 2\n",
+        "expected": "3\n"
+      }
+    ],
+    "data_kind": "controlled_fixture"
+  },
+  {
+    "id": "wrapped",
+    "source_code": "a,b=map(int,input().split()); print(a+b)\n",
+    "source_language": "Python",
+    "target_language": "Python",
+    "raw_output": "```python\na,b=map(int,input().split()); print(a+b)\n```\n",
+    "original_tests": [
+      {
+        "input": "1 2\n",
+        "expected": "3\n"
+      }
+    ],
+    "data_kind": "controlled_fixture"
+  },
+  {
+    "id": "ambiguous",
+    "source_code": "a,b=map(int,input().split()); print(a+b)\n",
+    "source_language": "Python",
+    "target_language": "Python",
+    "raw_output": "```python\nprint(3)\n```\n```python\na,b=map(int,input().split()); print(a+b)\n```\n",
+    "original_tests": [
+      {
+        "input": "1 2\n",
+        "expected": "3\n"
+      }
+    ],
+    "data_kind": "controlled_fixture"
+  }
+]

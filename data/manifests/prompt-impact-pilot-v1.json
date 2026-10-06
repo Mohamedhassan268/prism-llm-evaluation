@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "name": "PRISM prompt-impact matched pilot",
+  "status": "agent-authored feasibility tasks; semantic-pair review and model execution pending",
+  "created_date": "2026-09-30",
+  "scope": "Synthetic, objectively scored microtasks; not the authors' prompt corpus or a model result",
+  "primary_comparison": ["reference", "cosmetic"],
+  "secondary_comparison": ["cosmetic", "cosmetic_self_repair"],
+  "self_repair_note": "This condition adds an explicit correction instruction. It tests a practical prompt-level repair opportunity, not the model's unobservable internal reasoning.",
+  "gap_policy": "The semantic-gap variant is reviewed for uncertainty handling; never score it against the hidden reference answer.",
+  "output_instruction": "Return exactly one JSON object and no explanation.",
+  "tasks": [
+    {
+      "id": "battery_capacity",
+      "domain": "record_selection",
+      "reference": "Battery A has capacity 1800 mAh. Battery B has capacity 2200 mAh. Which battery has the higher capacity? Return exactly one JSON object with keys battery and capacity_mAh, and no explanation.",
+      "cosmetic": "Batttery A has capcity 1800 mAh. Battery B has capacity 2200 mAh. Which battery has the higher capcity? Return exactly one JSON object with keys battery and capacity_mAh, and no explanation.",
+      "gap": "Battery A has capacity 1800 mAh. Battery B has capacity 2200 mAh. Which battery is better? Return exactly one JSON object with key answer, and no explanation.",
+      "cosmetic_edit": "Misspell battery and capacity without changing values or selection rule.",
+      "gap_reason": "Better has no specified criterion; higher capacity is only one possible interpretation.",
+      "expected": {"battery": "B", "capacity_mAh": 2200}
+    },
+    {
+      "id": "fastest_run",
+      "domain": "record_selection",
+      "reference": "Run r1 took 23 ms, run r2 took 17 ms, and run r3 took 21 ms. Select the run with the lowest latency. Return exactly one JSON object with keys run and latency_ms, and no explanation.",
+      "cosmetic": "Run r1 took 23 ms, run r2 took 17 ms, and run r3 took 21 ms. Selct the run with the lowest latncy. Return exactly one JSON object with keys run and latency_ms, and no explanation.",
+      "gap": "Run r1 took 23 ms, run r2 took 17 ms, and run r3 took 21 ms. Select the best run. Return exactly one JSON object with key answer, and no explanation.",
+      "cosmetic_edit": "Misspell select and latency; preserve the lowest-latency criterion.",
+      "gap_reason": "Best could reflect criteria other than latency.",
+      "expected": {"run": "r2", "latency_ms": 17}
+    },
+    {
+      "id": "attenuation_total",
+      "domain": "arithmetic",
+      "reference": "A cable has attenuation 0.2 dB per metre over 15 metres. Compute total attenuation by multiplying rate by length. Return exactly one JSON object with key loss_dB, and no explanation.",
+      "cosmetic": "A cable has attnuation 0.2 dB per metre over 15 metres. Compute total attnuation by multiplying rate by length. Return exactly one JSON object with key loss_dB, and no explanation.",
+      "gap": "A cable has attenuation 0.2 dB per metre. Compute its total attenuation. Return exactly one JSON object with key answer, and no explanation.",
+      "cosmetic_edit": "Misspell attenuation; keep the rate, length, operation and unit.",
+      "gap_reason": "Length is missing, so total attenuation is undetermined.",
+      "expected": {"loss_dB": 3.0}
+    },
+    {
+      "id": "power_comparison",
+      "domain": "unit_conversion",
+      "reference": "Source A emits 0.4 W and source B emits 850 mW. Convert both to mW and choose the source with higher power. Return exactly one JSON object with keys source and power_mW, and no explanation.",
+      "cosmetic": "Source A emits 0.4 W and source B emits 850 mW. Conver both to mW and choose the source with higer power. Return exactly one JSON object with keys source and power_mW, and no explanation.",
+      "gap": "Source A emits 0.4 W and source B emits 850 mW. Choose the better source. Return exactly one JSON object with key answer, and no explanation.",
+      "cosmetic_edit": "Misspell convert and higher; preserve the unit conversion and comparison.",
+      "gap_reason": "Better could refer to criteria other than emitted power.",
+      "expected": {"source": "B", "power_mW": 850}
+    },
+    {
+      "id": "failed_cases",
+      "domain": "counting",
+      "reference": "The test outcomes are pass, fail, skip, pass, fail, pass. Count only failures. Return exactly one JSON object with key failures, and no explanation.",
+      "cosmetic": "The test outcomes are pass, fail, skip, pass, fail, pass. Count only failurs. Return exactly one JSON object with key failures, and no explanation.",
+      "gap": "The test outcomes are pass, fail, skip, pass, fail, pass. Count the problem cases. Return exactly one JSON object with key answer, and no explanation.",
+      "cosmetic_edit": "Misspell failures in prose; the exact output key remains intact.",
+      "gap_reason": "Problem cases could mean failures only or failures plus skips.",
+      "expected": {"failures": 2}
+    },
+    {
+      "id": "mean_accuracy",
+      "domain": "arithmetic",
+      "reference": "Three trial accuracies are 80%, 90%, and 100%. Compute their arithmetic mean as a percentage. Return exactly one JSON object with key mean_percent, and no explanation.",
+      "cosmetic": "Three trial accuracies are 80%, 90%, and 100%. Compute their arithmatic mean as a percntage. Return exactly one JSON object with key mean_percent, and no explanation.",
+      "gap": "Three trial accuracies are 80%, 90%, and 100%. Report the overall accuracy. Return exactly one JSON object with key answer, and no explanation.",
+      "cosmetic_edit": "Misspell arithmetic and percentage; preserve the mean operation.",
+      "gap_reason": "Overall accuracy could be pooled across different trial sizes, which are not provided.",
+      "expected": {"mean_percent": 90}
+    },
+    {
+      "id": "newest_semver",
+      "domain": "ordering",
+      "reference": "Package A has version 1.2.9 and package B has version 1.10.0. Compare versions by numeric major, minor, and patch components, then choose the newer package. Return exactly one JSON object with keys package and version, and no explanation.",
+      "cosmetic": "Package A has version 1.2.9 and package B has version 1.10.0. Compre versions by numeric major, minor, and patch componets, then choose the newer package. Return exactly one JSON object with keys package and version, and no explanation.",
+      "gap": "Package A has version 1.2.9 and package B has version 1.10.0. Which package should we choose? Return exactly one JSON object with key answer, and no explanation.",
+      "cosmetic_edit": "Misspell compare and components; preserve numeric version ordering.",
+      "gap_reason": "Choice might depend on stability or compatibility, not just version number.",
+      "expected": {"package": "B", "version": "1.10.0"}
+    },
+    {
+      "id": "latest_event",
+      "domain": "ordering",
+      "reference": "Event A happened at 2026-09-30T10:00:00Z. Event B happened at 2026-09-30T09:30:00-01:00. Which event happened later in absolute time? Return exactly one JSON object with key event, and no explanation.",
+      "cosmetic": "Event A happened at 2026-09-30T10:00:00Z. Event B happened at 2026-09-30T09:30:00-01:00. Which event happend later in absolute time? Return exactly one JSON object with key event, and no explanation.",
+      "gap": "Event A happened at 10:00. Event B happened at 09:30. Which event happened later? Return exactly one JSON object with key answer, and no explanation.",
+      "cosmetic_edit": "Misspell happened; preserve both timestamps and absolute-time criterion.",
+      "gap_reason": "Dates and time zones are absent from the gap variant.",
+      "expected": {"event": "B"}
+    },
+    {
+      "id": "duplicate_ids",
+      "domain": "set_operation",
+      "reference": "The IDs are P3, P1, P3, P2, P1. List every ID that occurs more than once, sorted ascending. Return exactly one JSON object with key duplicates containing an array, and no explanation.",
+      "cosmetic": "The IDs are P3, P1, P3, P2, P1. List every ID that occurrs more than once, sorted ascendng. Return exactly one JSON object with key duplicates containing an array, and no explanation.",
+      "gap": "The IDs are P3, P1, P3, P2, P1. List the important IDs. Return exactly one JSON object with key answer, and no explanation.",
+      "cosmetic_edit": "Misspell occurs and ascending; preserve the duplicate criterion.",
+      "gap_reason": "Important does not define a selection rule.",
+      "expected": {"duplicates": ["P1", "P3"]}
+    },
+    {
+      "id": "in_range_sensor",
+      "domain": "thresholding",
+      "reference": "Sensor A reads -1 C, sensor B reads 3 C, and sensor C reads 8 C. A valid reading is from 0 C through 5 C inclusive. Return exactly one JSON object with key valid_sensors containing an array in alphabetical order, and no explanation.",
+      "cosmetic": "Sensor A reads -1 C, sensor B reads 3 C, and sensor C reads 8 C. A valid reading is from 0 C through 5 C inclussive. Return exactly one JSON object with key valid_sensors containing an array in alphabetical order, and no explanation.",
+      "gap": "Sensor A reads -1 C, sensor B reads 3 C, and sensor C reads 8 C. Return the valid sensors. Return exactly one JSON object with key answer, and no explanation.",
+      "cosmetic_edit": "Misspell inclusive; preserve both bounds and ordering.",
+      "gap_reason": "The valid temperature range is missing.",
+      "expected": {"valid_sensors": ["B"]}
+    },
+    {
+      "id": "optical_power",
+      "domain": "field_extraction",
+      "reference": "A report states: output optical power = 3.4 mW; input electrical power = 20 mW. Extract only the output optical power in mW. Return exactly one JSON object with key optical_power_mW, and no explanation.",
+      "cosmetic": "A report states: output optical power = 3.4 mW; input electrical power = 20 mW. Exract only the output optcal power in mW. Return exactly one JSON object with key optical_power_mW, and no explanation.",
+      "gap": "A report states: output optical power = 3.4 mW; input electrical power = 20 mW. Extract the power in mW. Return exactly one JSON object with key answer, and no explanation.",
+      "cosmetic_edit": "Misspell extract and optical; preserve target field.",
+      "gap_reason": "The report has two powers; the target field is underspecified in prose.",
+      "expected": {"optical_power_mW": 3.4}
+    },
+    {
+      "id": "latency_constrained_model",
+      "domain": "constrained_selection",
+      "reference": "Model A has accuracy 0.94 and latency 30 ms. Model B has accuracy 0.92 and latency 20 ms. Among models with latency at most 25 ms, choose the highest accuracy. Return exactly one JSON object with keys model and accuracy, and no explanation.",
+      "cosmetic": "Model A has accuracy 0.94 and latency 30 ms. Model B has accuracy 0.92 and latency 20 ms. Among models with latncy at most 25 ms, choose the higest accuracy. Return exactly one JSON object with keys model and accuracy, and no explanation.",
+      "gap": "Model A has accuracy 0.94 and latency 30 ms. Model B has accuracy 0.92 and latency 20 ms. Choose the best model. Return exactly one JSON object with key answer, and no explanation.",
+      "cosmetic_edit": "Misspell latency and highest; preserve both constraint and objective.",
+      "gap_reason": "The speed/accuracy tradeoff criterion is missing.",
+      "expected": {"model": "B", "accuracy": 0.92}
+    }
+  ]
+}

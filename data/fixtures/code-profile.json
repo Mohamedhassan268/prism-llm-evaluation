@@ -1,0 +1,34 @@
+{
+  "version": "controlled-arithmetic-v1",
+  "comparator": "strict-exact-v1",
+  "extraction": "conservative-fences-v1",
+  "domains": {
+    "89a7c6101c8009386507eba92d1a2223bf6862dff51fd5434c32a20a9606545d": {
+      "status": "independently_checked",
+      "domain_description": "Exactly two signed integers, each within -1000..1000. Expected sum is calculated independently, within int32.",
+      "oracle_evidence": "Elementary integer addition; generator contains no program calls.",
+      "tests": [
+        {
+          "input": "-1000 1000\n",
+          "expected": "0\n"
+        },
+        {
+          "input": "0 0\n",
+          "expected": "0\n"
+        },
+        {
+          "input": "2 3\n",
+          "expected": "5\n"
+        },
+        {
+          "input": "1000 1000\n",
+          "expected": "2000\n"
+        },
+        {
+          "input": "-7 -9\n",
+          "expected": "-16\n"
+        }
+      ]
+    }
+  }
+}

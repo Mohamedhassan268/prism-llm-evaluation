@@ -1,0 +1,14 @@
+{
+  "version": "heldout-source-design-check-v1",
+  "comparator": "strict-exact-v1",
+  "grading_status": "reconstructed",
+  "human_review": {
+    "protocol": "approved",
+    "samples": "approved",
+    "frozen_design": "pending"
+  },
+  "review_basis": "User: next is what start it; 2026-09-29",
+  "domains": {},
+  "purpose": "Original-source validation only; no held-out target grading",
+  "selection_status": "Reference checks for 97 proposed retained pairs; final eligibility/design approval pending"
+}

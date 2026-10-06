@@ -1,0 +1,385 @@
+{
+  "schema_version": 1,
+  "retrieved_date": "2026-09-29",
+  "repository": "RISElabQueens/forge24-code-translation",
+  "commit": "036135a1ba6d4cd7f0562058bea0912381a0f3e9",
+  "tree_source_url": "https://api.github.com/repos/RISElabQueens/forge24-code-translation/git/trees/036135a1ba6d4cd7f0562058bea0912381a0f3e9?recursive=1",
+  "repository_files": [
+    {
+      "path": "LICENSE",
+      "bytes": 1070,
+      "git_blob_sha1": "74faad3bd16c3bfdeeb51fcad4b4fd1e0e8f0ab7"
+    },
+    {
+      "path": "Preliminary/dataset_after_processing.csv",
+      "bytes": 3210535,
+      "git_blob_sha1": "fc0a1ef448933083766c819b8d0c94f4d150ec2a"
+    },
+    {
+      "path": "Preliminary/original_dataset_before_processing.csv",
+      "bytes": 4284643,
+      "git_blob_sha1": "c6250c7c6c2bb5b24411d2cd158ace73826747a4"
+    },
+    {
+      "path": "Preliminary/process_dataset.ipynb",
+      "bytes": 22607,
+      "git_blob_sha1": "3ce4f28b94d6e1d7fcc5c3746b9291debcb83439"
+    },
+    {
+      "path": "Prompt Templates/Control/CodeLlama.txt",
+      "bytes": 373,
+      "git_blob_sha1": "07e0489682c3cfbfbecde40c4d4943c057fe885d"
+    },
+    {
+      "path": "Prompt Templates/Control/Magicoder.txt",
+      "bytes": 377,
+      "git_blob_sha1": "1326ef183ae139414bb93c929c9a71e2f8a69dae"
+    },
+    {
+      "path": "Prompt Templates/Control/Mixtral.txt",
+      "bytes": 380,
+      "git_blob_sha1": "a3e38a2355f35f25420bd585f8658ee112f1c7a2"
+    },
+    {
+      "path": "Prompt Templates/Control/Wizard.txt",
+      "bytes": 380,
+      "git_blob_sha1": "c60470a85d98f6f751cdae8c231c08806d1e5e3d"
+    },
+    {
+      "path": "Prompt Templates/Reference/Reference.txt",
+      "bytes": 113,
+      "git_blob_sha1": "0f5ce2bb12bb49e340a4f4db78793e5d38ab287f"
+    },
+    {
+      "path": "Prompt Templates/Vanilla/CodeLlama.txt",
+      "bytes": 361,
+      "git_blob_sha1": "631dd814e67db9839a23e2c307832cc63d434be4"
+    },
+    {
+      "path": "Prompt Templates/Vanilla/Magicoder.txt",
+      "bytes": 364,
+      "git_blob_sha1": "8168b8f4fe1b44662f85fde056ee6e572d37bcce"
+    },
+    {
+      "path": "Prompt Templates/Vanilla/Mixtral.txt",
+      "bytes": 368,
+      "git_blob_sha1": "94e477a4ee1a0f1d7cc785ccf8e5196138f4eb8c"
+    },
+    {
+      "path": "Prompt Templates/Vanilla/Wizard.txt",
+      "bytes": 368,
+      "git_blob_sha1": "b4555453048291b08159fbcbfaa551e49933fc7f"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1655,
+      "git_blob_sha1": "1d6b336e288943ed92a2f9f7f8d98dc1053b3f8f"
+    },
+    {
+      "path": "RQ1/combined_llm_language_pair_strata_reference_vanilla.xlsx",
+      "bytes": 326073,
+      "git_blob_sha1": "2187ba2e7ed72aef75121114de6b7211a09bea1b"
+    },
+    {
+      "path": "RQ2/combined_llm_language_pair_strata_vanilla_control.xlsx",
+      "bytes": 348559,
+      "git_blob_sha1": "06ae21cd40f0fc28581256febb7da644760c754a"
+    },
+    {
+      "path": "RQ3/rq3_files.zip",
+      "bytes": 55350192,
+      "git_blob_sha1": "42390f31eac7e9280b9267af6b083cd9ce825207"
+    },
+    {
+      "path": "RQ4/rq4.z01",
+      "bytes": 52428800,
+      "git_blob_sha1": "85f9eec838bdb24cd4a327ed72dd57778a97aed7"
+    },
+    {
+      "path": "RQ4/rq4.z02",
+      "bytes": 52428800,
+      "git_blob_sha1": "bf4965d31ce2704b3fc2a4458f862b2aefbb65b1"
+    },
+    {
+      "path": "RQ4/rq4.z03",
+      "bytes": 52428800,
+      "git_blob_sha1": "d7f560a93e6084d38eef146e724882f9c135012c"
+    },
+    {
+      "path": "RQ4/rq4.z04",
+      "bytes": 52428800,
+      "git_blob_sha1": "22cd91b96b107aa3e056b566015763523146aab6"
+    },
+    {
+      "path": "RQ4/rq4.zip",
+      "bytes": 16829084,
+      "git_blob_sha1": "3c7b36f6965adf6fb74e2b93b7a4506704fe841f"
+    },
+    {
+      "path": "RQ4/rq4_extend_codenet_dataset.ipynb",
+      "bytes": 25444,
+      "git_blob_sha1": "6e6dce7deb73704802c15d6fbcdc2b2e8161f6b1"
+    },
+    {
+      "path": "RQ4/rq4_metrics_analysis.ipynb",
+      "bytes": 197692,
+      "git_blob_sha1": "69484343570def3d1cbb5e1e5f2d6e1f4b706ae4"
+    },
+    {
+      "path": "RQ5/combined_output.xlsx",
+      "bytes": 700457,
+      "git_blob_sha1": "06a9f31a6c351e91d5ff9d7da62c396907f11cf7"
+    },
+    {
+      "path": "RQ5/gemini_15_vanilla_outputs.xlsx",
+      "bytes": 178053,
+      "git_blob_sha1": "5052d2d320407eee8e18ac21149621f296c14989"
+    },
+    {
+      "path": "RQ5/gpt35_control_outputs.csv",
+      "bytes": 640312,
+      "git_blob_sha1": "9b0bac28bb3ef2fcd01f851d0e7199571d90b433"
+    },
+    {
+      "path": "RQ5/gpt35_vanilla_outputs.csv",
+      "bytes": 640777,
+      "git_blob_sha1": "0d919ce0fc1ccd8f14100eb728f351b3740d3126"
+    },
+    {
+      "path": "RQ5/gpt4_classic_vanilla.xlsx",
+      "bytes": 174483,
+      "git_blob_sha1": "a57671079b74fbb495ef45201f445963bfe44333"
+    },
+    {
+      "path": "RQ5/gpt4_control.csv",
+      "bytes": 641275,
+      "git_blob_sha1": "bba901df8dcf8886c46e82e7fe126fe1c482ae27"
+    },
+    {
+      "path": "RQ5/gpt4o_mini_vanilla_outputs.csv",
+      "bytes": 655556,
+      "git_blob_sha1": "871b047706f82ad12b38308879359bf65abc0993"
+    },
+    {
+      "path": "RQ5/gpt4o_vanilla.xlsx",
+      "bytes": 205330,
+      "git_blob_sha1": "0addbd77faa6cab9c73057461d5161ef663ee6bc"
+    },
+    {
+      "path": "RQ5/merge.ipynb",
+      "bytes": 2740,
+      "git_blob_sha1": "3017d06c2ee74f5c50268d17877d31a2a8321364"
+    }
+  ],
+  "artifacts": [
+    {
+      "repository_path": "LICENSE",
+      "path": "data/cache/authors/036135a1ba6d4cd7f0562058bea0912381a0f3e9/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/RISElabQueens/forge24-code-translation/036135a1ba6d4cd7f0562058bea0912381a0f3e9/LICENSE",
+      "git_commit": "036135a1ba6d4cd7f0562058bea0912381a0f3e9",
+      "git_blob_sha1": "74faad3bd16c3bfdeeb51fcad4b4fd1e0e8f0ab7",
+      "sha256": "8af6771b162e5e1d681a6ec5d218b95c304558b7e8ab62666f3762c3c4204c26",
+      "bytes": 1070,
+      "license": "MIT (repository); upstream dataset provenance requires separate review"
+    },
+    {
+      "repository_path": "README.md",
+      "path": "data/cache/authors/036135a1ba6d4cd7f0562058bea0912381a0f3e9/README.md",
+      "source_url": "https://raw.githubusercontent.com/RISElabQueens/forge24-code-translation/036135a1ba6d4cd7f0562058bea0912381a0f3e9/README.md",
+      "git_commit": "036135a1ba6d4cd7f0562058bea0912381a0f3e9",
+      "git_blob_sha1": "1d6b336e288943ed92a2f9f7f8d98dc1053b3f8f",
+      "sha256": "144c95ea8b5a7dcaa7f1432c26131821be12da26923b1367f7383e7e5df186c0",
+      "bytes": 1655,
+      "license": "MIT (repository); upstream dataset provenance requires separate review"
+    },
+    {
+      "repository_path": "Preliminary/dataset_after_processing.csv",
+      "path": "data/cache/authors/036135a1ba6d4cd7f0562058bea0912381a0f3e9/Preliminary/dataset_after_processing.csv",
+      "source_url": "https://raw.githubusercontent.com/RISElabQueens/forge24-code-translation/036135a1ba6d4cd7f0562058bea0912381a0f3e9/Preliminary/dataset_after_processing.csv",
+      "git_commit": "036135a1ba6d4cd7f0562058bea0912381a0f3e9",
+      "git_blob_sha1": "fc0a1ef448933083766c819b8d0c94f4d150ec2a",
+      "sha256": "77c4d10c20ce6af2ab9a2a583b4dc68411c986579d7546cb677cae17b352488d",
+      "bytes": 3210535,
+      "license": "MIT (repository); upstream dataset provenance requires separate review"
+    },
+    {
+      "repository_path": "Preliminary/process_dataset.ipynb",
+      "path": "data/cache/authors/036135a1ba6d4cd7f0562058bea0912381a0f3e9/Preliminary/process_dataset.ipynb",
+      "source_url": "https://raw.githubusercontent.com/RISElabQueens/forge24-code-translation/036135a1ba6d4cd7f0562058bea0912381a0f3e9/Preliminary/process_dataset.ipynb",
+      "git_commit": "036135a1ba6d4cd7f0562058bea0912381a0f3e9",
+      "git_blob_sha1": "3ce4f28b94d6e1d7fcc5c3746b9291debcb83439",
+      "sha256": "186ab5b70dcf54f74f23bc8fd0d07605ad829deba7491b93eca122eae18a9843",
+      "bytes": 22607,
+      "license": "MIT (repository); upstream dataset provenance requires separate review"
+    },
+    {
+      "repository_path": "RQ3/rq3_files.zip",
+      "path": "data/cache/authors/036135a1ba6d4cd7f0562058bea0912381a0f3e9/RQ3/rq3_files.zip",
+      "source_url": "https://raw.githubusercontent.com/RISElabQueens/forge24-code-translation/036135a1ba6d4cd7f0562058bea0912381a0f3e9/RQ3/rq3_files.zip",
+      "git_commit": "036135a1ba6d4cd7f0562058bea0912381a0f3e9",
+      "git_blob_sha1": "42390f31eac7e9280b9267af6b083cd9ce825207",
+      "sha256": "0e4e48e098fc87be80404027b69199e5437a37146851ba027061981cad010fb7",
+      "bytes": 55350192,
+      "license": "MIT (repository); upstream dataset provenance requires separate review"
+    },
+    {
+      "repository_path": "RQ4/rq4_extend_codenet_dataset.ipynb",
+      "path": "data/cache/authors/036135a1ba6d4cd7f0562058bea0912381a0f3e9/RQ4/rq4_extend_codenet_dataset.ipynb",
+      "source_url": "https://raw.githubusercontent.com/RISElabQueens/forge24-code-translation/036135a1ba6d4cd7f0562058bea0912381a0f3e9/RQ4/rq4_extend_codenet_dataset.ipynb",
+      "git_commit": "036135a1ba6d4cd7f0562058bea0912381a0f3e9",
+      "git_blob_sha1": "6e6dce7deb73704802c15d6fbcdc2b2e8161f6b1",
+      "sha256": "8460b098c83bb1b0296dc869f9456b7983cf86bc42cbd09f98c56a24350dc6fc",
+      "bytes": 25444,
+      "license": "MIT (repository); upstream dataset provenance requires separate review"
+    },
+    {
+      "repository_path": "RQ4/rq4_metrics_analysis.ipynb",
+      "path": "data/cache/authors/036135a1ba6d4cd7f0562058bea0912381a0f3e9/RQ4/rq4_metrics_analysis.ipynb",
+      "source_url": "https://raw.githubusercontent.com/RISElabQueens/forge24-code-translation/036135a1ba6d4cd7f0562058bea0912381a0f3e9/RQ4/rq4_metrics_analysis.ipynb",
+      "git_commit": "036135a1ba6d4cd7f0562058bea0912381a0f3e9",
+      "git_blob_sha1": "69484343570def3d1cbb5e1e5f2d6e1f4b706ae4",
+      "sha256": "25f8f9c75c95649e60bee414db561b75cf0b332a25946f1dc83a80b439a6e1c6",
+      "bytes": 197692,
+      "license": "MIT (repository); upstream dataset provenance requires separate review"
+    },
+    {
+      "repository_path": "Prompt Templates/Control/CodeLlama.txt",
+      "path": "data/cache/authors/036135a1ba6d4cd7f0562058bea0912381a0f3e9/Prompt Templates/Control/CodeLlama.txt",
+      "source_url": "https://raw.githubusercontent.com/RISElabQueens/forge24-code-translation/036135a1ba6d4cd7f0562058bea0912381a0f3e9/Prompt%20Templates/Control/CodeLlama.txt",
+      "git_commit": "036135a1ba6d4cd7f0562058bea0912381a0f3e9",
+      "git_blob_sha1": "07e0489682c3cfbfbecde40c4d4943c057fe885d",
+      "sha256": "eaae5893d04acca43688e2bb2fd0f8d82d98f2f25f219e6c80d0bd08e3f501bd",
+      "bytes": 373,
+      "license": "MIT (repository); upstream dataset provenance requires separate review"
+    },
+    {
+      "repository_path": "Prompt Templates/Control/Magicoder.txt",
+      "path": "data/cache/authors/036135a1ba6d4cd7f0562058bea0912381a0f3e9/Prompt Templates/Control/Magicoder.txt",
+      "source_url": "https://raw.githubusercontent.com/RISElabQueens/forge24-code-translation/036135a1ba6d4cd7f0562058bea0912381a0f3e9/Prompt%20Templates/Control/Magicoder.txt",
+      "git_commit": "036135a1ba6d4cd7f0562058bea0912381a0f3e9",
+      "git_blob_sha1": "1326ef183ae139414bb93c929c9a71e2f8a69dae",
+      "sha256": "97c92575b7a5c47f83a080635ea0cc4ec84a2281238872d728fcc3759af76d5a",
+      "bytes": 377,
+      "license": "MIT (repository); upstream dataset provenance requires separate review"
+    },
+    {
+      "repository_path": "Prompt Templates/Control/Mixtral.txt",
+      "path": "data/cache/authors/036135a1ba6d4cd7f0562058bea0912381a0f3e9/Prompt Templates/Control/Mixtral.txt",
+      "source_url": "https://raw.githubusercontent.com/RISElabQueens/forge24-code-translation/036135a1ba6d4cd7f0562058bea0912381a0f3e9/Prompt%20Templates/Control/Mixtral.txt",
+      "git_commit": "036135a1ba6d4cd7f0562058bea0912381a0f3e9",
+      "git_blob_sha1": "a3e38a2355f35f25420bd585f8658ee112f1c7a2",
+      "sha256": "652638ac2fbfa4f7f6510c73b33b80a2a27e38510cfe7a83b3f8c35c270573d8",
+      "bytes": 380,
+      "license": "MIT (repository); upstream dataset provenance requires separate review"
+    },
+    {
+      "repository_path": "Prompt Templates/Control/Wizard.txt",
+      "path": "data/cache/authors/036135a1ba6d4cd7f0562058bea0912381a0f3e9/Prompt Templates/Control/Wizard.txt",
+      "source_url": "https://raw.githubusercontent.com/RISElabQueens/forge24-code-translation/036135a1ba6d4cd7f0562058bea0912381a0f3e9/Prompt%20Templates/Control/Wizard.txt",
+      "git_commit": "036135a1ba6d4cd7f0562058bea0912381a0f3e9",
+      "git_blob_sha1": "c60470a85d98f6f751cdae8c231c08806d1e5e3d",
+      "sha256": "ea821a85e3c6229fbd43fbc3f7447ede9229e969b6c9d77ad536df4eb8c42933",
+      "bytes": 380,
+      "license": "MIT (repository); upstream dataset provenance requires separate review"
+    },
+    {
+      "repository_path": "Prompt Templates/Reference/Reference.txt",
+      "path": "data/cache/authors/036135a1ba6d4cd7f0562058bea0912381a0f3e9/Prompt Templates/Reference/Reference.txt",
+      "source_url": "https://raw.githubusercontent.com/RISElabQueens/forge24-code-translation/036135a1ba6d4cd7f0562058bea0912381a0f3e9/Prompt%20Templates/Reference/Reference.txt",
+      "git_commit": "036135a1ba6d4cd7f0562058bea0912381a0f3e9",
+      "git_blob_sha1": "0f5ce2bb12bb49e340a4f4db78793e5d38ab287f",
+      "sha256": "70080110a16ca2d2740597d367f977102b1720b43d5b0be2b999969b6f29a903",
+      "bytes": 113,
+      "license": "MIT (repository); upstream dataset provenance requires separate review"
+    },
+    {
+      "repository_path": "Prompt Templates/Vanilla/CodeLlama.txt",
+      "path": "data/cache/authors/036135a1ba6d4cd7f0562058bea0912381a0f3e9/Prompt Templates/Vanilla/CodeLlama.txt",
+      "source_url": "https://raw.githubusercontent.com/RISElabQueens/forge24-code-translation/036135a1ba6d4cd7f0562058bea0912381a0f3e9/Prompt%20Templates/Vanilla/CodeLlama.txt",
+      "git_commit": "036135a1ba6d4cd7f0562058bea0912381a0f3e9",
+      "git_blob_sha1": "631dd814e67db9839a23e2c307832cc63d434be4",
+      "sha256": "b63b45690a3cf8f1bbff8af5ec9e9045fa80eaabde091290c56f2e568ea6f6f4",
+      "bytes": 361,
+      "license": "MIT (repository); upstream dataset provenance requires separate review"
+    },
+    {
+      "repository_path": "Prompt Templates/Vanilla/Magicoder.txt",
+      "path": "data/cache/authors/036135a1ba6d4cd7f0562058bea0912381a0f3e9/Prompt Templates/Vanilla/Magicoder.txt",
+      "source_url": "https://raw.githubusercontent.com/RISElabQueens/forge24-code-translation/036135a1ba6d4cd7f0562058bea0912381a0f3e9/Prompt%20Templates/Vanilla/Magicoder.txt",
+      "git_commit": "036135a1ba6d4cd7f0562058bea0912381a0f3e9",
+      "git_blob_sha1": "8168b8f4fe1b44662f85fde056ee6e572d37bcce",
+      "sha256": "139c0c3d453e8d9386365f19ca70f65d5c57ce376336b980b3bc1f7457b6a67d",
+      "bytes": 364,
+      "license": "MIT (repository); upstream dataset provenance requires separate review"
+    },
+    {
+      "repository_path": "Prompt Templates/Vanilla/Mixtral.txt",
+      "path": "data/cache/authors/036135a1ba6d4cd7f0562058bea0912381a0f3e9/Prompt Templates/Vanilla/Mixtral.txt",
+      "source_url": "https://raw.githubusercontent.com/RISElabQueens/forge24-code-translation/036135a1ba6d4cd7f0562058bea0912381a0f3e9/Prompt%20Templates/Vanilla/Mixtral.txt",
+      "git_commit": "036135a1ba6d4cd7f0562058bea0912381a0f3e9",
+      "git_blob_sha1": "94e477a4ee1a0f1d7cc785ccf8e5196138f4eb8c",
+      "sha256": "cc5fbc225911d08697fe135e03937762166cba66688111956cb6fb16c0d38615",
+      "bytes": 368,
+      "license": "MIT (repository); upstream dataset provenance requires separate review"
+    },
+    {
+      "repository_path": "Prompt Templates/Vanilla/Wizard.txt",
+      "path": "data/cache/authors/036135a1ba6d4cd7f0562058bea0912381a0f3e9/Prompt Templates/Vanilla/Wizard.txt",
+      "source_url": "https://raw.githubusercontent.com/RISElabQueens/forge24-code-translation/036135a1ba6d4cd7f0562058bea0912381a0f3e9/Prompt%20Templates/Vanilla/Wizard.txt",
+      "git_commit": "036135a1ba6d4cd7f0562058bea0912381a0f3e9",
+      "git_blob_sha1": "b4555453048291b08159fbcbfaa551e49933fc7f",
+      "sha256": "8799d1086d338ff96db75ad433a9213987a2c5568cc8bba1aff220911c23a63e",
+      "bytes": 368,
+      "license": "MIT (repository); upstream dataset provenance requires separate review"
+    }
+  ],
+  "zip_inspection": {
+    "path": "data/cache/authors/036135a1ba6d4cd7f0562058bea0912381a0f3e9/RQ3/rq3_files.zip",
+    "expanded_bytes": 316752657,
+    "members": [
+      {
+        "name": "inference_output_11_models_vre.csv",
+        "bytes": 105406056,
+        "compressed_bytes": 18452382,
+        "crc32": "8c3bbe07"
+      },
+      {
+        "name": "inference_output_11_models_cre.csv",
+        "bytes": 104377310,
+        "compressed_bytes": 18095970,
+        "crc32": "691a2da6"
+      },
+      {
+        "name": "rand_sample_350_WizzardCoder-34B_vde.csv",
+        "bytes": 414491,
+        "compressed_bytes": 98237,
+        "crc32": "cc30a517"
+      },
+      {
+        "name": "rand_sample_350_Magicoder-S-CL-7B_vde.csv",
+        "bytes": 393349,
+        "compressed_bytes": 94527,
+        "crc32": "77951c39"
+      },
+      {
+        "name": "rand_sample_350_Mixtral_cre.csv",
+        "bytes": 331347,
+        "compressed_bytes": 78771,
+        "crc32": "f594655a"
+      },
+      {
+        "name": "rand_sample_350_Magicoder-CL-7B_vde.csv",
+        "bytes": 424048,
+        "compressed_bytes": 76499,
+        "crc32": "8a79d352"
+      },
+      {
+        "name": "inference_output_11_models_vde.csv",
+        "bytes": 105406056,
+        "compressed_bytes": 18452382,
+        "crc32": "8c3bbe07"
+      }
+    ],
+    "extraction": "not extracted; safe streaming inspection only"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "corpus_kind": "controlled_fixture",
+  "description": "Synthetic harness controls. These are not prompts from the paper or real repositories.",
+  "records": [
+    {"id": "duplicate-a", "text": "Return a JSON object.", "repository": "fixture/collection", "commit": "controlled-fixture-v1", "path": "one.md", "language": "en"},
+    {"id": "duplicate-b", "text": "Return a JSON object.", "repository": "fixture/collection", "commit": "controlled-fixture-v1", "path": "two.txt", "language": "en"},
+    {"id": "duplicate-across", "text": "Return a JSON object.", "repository": "fixture/application", "commit": "controlled-fixture-v1", "path": "prompts.json", "language": "en"},
+    {"id": "technical-terms", "text": "Use pytest to check LLM and JSON output.", "repository": "fixture/courseware", "commit": "controlled-fixture-v1", "path": "qa.md", "language": "en"},
+    {"id": "declared-template", "text": "Explain {topic}. Return {\"answer\": \"text\"}.", "repository": "fixture/application", "commit": "controlled-fixture-v1", "path": "template.txt", "language": "en", "declared_variables": ["topic"], "supplied_variables": {"topic": "QA"}},
+    {"id": "missing-variable", "text": "Summarize {topic} in {style}.", "repository": "fixture/courseware", "commit": "controlled-fixture-v1", "path": "example.txt", "language": "en", "declared_variables": ["topic", "style"], "supplied_variables": {"topic": "testing"}}
+  ]
+}

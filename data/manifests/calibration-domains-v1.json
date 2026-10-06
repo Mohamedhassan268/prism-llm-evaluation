@@ -1,0 +1,2677 @@
+{
+  "version": "calibration-specification-tests-v1",
+  "comparator": "strict-exact-v1",
+  "grading_status": "reconstructed",
+  "human_review": {
+    "protocol": "approved",
+    "samples": "approved",
+    "frozen_design": "pending"
+  },
+  "review_basis": "User: next is what start it; 2026-09-29",
+  "domains": {
+    "153349667eb938d5ce9a734e746b425c2bef8df24b0560d4ca3ab1549e7ff0c2": {
+      "status": "independently_checked",
+      "sample_id": "58801",
+      "domain_description": "2<=N<=100000; -1e9<=Ai<=1e9",
+      "pilot_coverage": "N<=8 for exhaustive adjacent-flip state search",
+      "specification": {
+        "sample_id": "58801",
+        "task": "abc125_d",
+        "title": "Flipping Signs",
+        "url": "https://atcoder.jp/contests/abc125/tasks/abc125_d?lang=en",
+        "constraints": "2<=N<=100000; -1e9<=Ai<=1e9",
+        "pilot_coverage": "N<=8 for exhaustive adjacent-flip state search",
+        "snapshot": "data/cache/task-statements/58801.html",
+        "sha256": "db51882bdd16b690166077afa274129300fc959234cbb8e70257f0c3605bfb80",
+        "retrieved_date": "2026-09-29",
+        "mapping_basis": "Exact official sample match and code/contract review. Task attribution is reconstructed, not supplied by authors.",
+        "mapping_review": "AI-assisted coordinator; independent human review pending"
+      },
+      "oracle_implementation": "src/prismqa/calibration_oracles.py",
+      "oracle_identity": "0d1f70d7afa402b5ea69209c44e285d5263715e4baf1f36d90dadd0415f05bd5",
+      "oracle_evidence": "Specification-derived oracle; exhaustive alternative searches where needed; official sample checked; no source/target calls.",
+      "reviewer": "AI-assisted coordinator, not an independent human reviewer",
+      "tests": [
+        {
+          "input": "2\n0 0\n",
+          "expected": "0\n"
+        },
+        {
+          "input": "2\n-1 1\n",
+          "expected": "0\n"
+        },
+        {
+          "input": "2\n-1 -1\n",
+          "expected": "2\n"
+        },
+        {
+          "input": "2\n1 1\n",
+          "expected": "2\n"
+        },
+        {
+          "input": "2\n-1000000000 1000000000\n",
+          "expected": "0\n"
+        },
+        {
+          "input": "3\n-1000000000 1000000000 1000000000\n",
+          "expected": "1000000000\n"
+        },
+        {
+          "input": "3\n-1 0 2\n",
+          "expected": "3\n"
+        },
+        {
+          "input": "3\n-869376569 933542598 59434247\n",
+          "expected": "1743484920\n"
+        },
+        {
+          "input": "8\n802500097 680564307 -341070497 302649243 64837009 -574847880 -178824236 281053995\n",
+          "expected": "3096673246\n"
+        },
+        {
+          "input": "4\n360119135 711145692 -715873997 664681562\n",
+          "expected": "1731582116\n"
+        },
+        {
+          "input": "2\n303116746 -367832187\n",
+          "expected": "64715441\n"
+        },
+        {
+          "input": "7\n697254803 538648710 -952271909 -871163317 645875043 -287117276 747629186\n",
+          "expected": "4165725692\n"
+        },
+        {
+          "input": "3\n-182270401 -793498682 -553864172\n",
+          "expected": "1165092453\n"
+        },
+        {
+          "input": "7\n-644714245 -155988122 687525952 -336877682 -32460754 -248435791 -314423869\n",
+          "expected": "2420426415\n"
+        },
+        {
+          "input": "2\n-436449183 -197382099\n",
+          "expected": "633831282\n"
+        },
+        {
+          "input": "6\n249873783 -765906094 -420564721 848475172 274424031 -108440383\n",
+          "expected": "2450803418\n"
+        },
+        {
+          "input": "3\n963310207 -997436753 -955407816\n",
+          "expected": "2916154776\n"
+        },
+        {
+          "input": "8\n371507896 230760147 -659479887 -11226308 883871783 -671156606 538656661 -603308963\n",
+          "expected": "3969968251\n"
+        },
+        {
+          "input": "3\n400151231 521368524 -807938176\n",
+          "expected": "929155469\n"
+        },
+        {
+          "input": "8\n392406980 -696554309 -777888275 -361665492 169012672 -287865048 -361775170 273780028\n",
+          "expected": "2982922630\n"
+        },
+        {
+          "input": "6\n678499666 -800325221 -360610601 -200271443 -228187735 -414421258\n",
+          "expected": "2281773038\n"
+        },
+        {
+          "input": "3\n-930402470 -338162374 -733096572\n",
+          "expected": "1325336668\n"
+        },
+        {
+          "input": "8\n-292002851 -844725204 387620817 -93906310 -158099572 477618133 -577578818 -73324148\n",
+          "expected": "2904875853\n"
+        },
+        {
+          "input": "5\n233186650 523362040 -920340883 385179694 483936142\n",
+          "expected": "2079632109\n"
+        },
+        {
+          "input": "2\n-523819256 363516035\n",
+          "expected": "160303221\n"
+        },
+        {
+          "input": "2\n-199710053 509957862\n",
+          "expected": "310247809\n"
+        },
+        {
+          "input": "3\n-618844531 -415090894 -526492373\n",
+          "expected": "730246010\n"
+        },
+        {
+          "input": "2\n-945802349 778646784\n",
+          "expected": "167155565\n"
+        },
+        {
+          "input": "6\n-139309517 -706965751 448900902 753682591 -960432335 990366772\n",
+          "expected": "3721038834\n"
+        },
+        {
+          "input": "8\n71252522 -703247216 629817885 -7244821 -327418871 465839494 -452246114 183644524\n",
+          "expected": "2840711447\n"
+        },
+        {
+          "input": "2\n612272632 -985706289\n",
+          "expected": "373433657\n"
+        },
+        {
+          "input": "5\n429382559 -919475604 957900278 -829585072 -487463435\n",
+          "expected": "2765041830\n"
+        },
+        {
+          "input": "4\n-634322350 602156959 791591618 -516584795\n",
+          "expected": "2544655722\n"
+        },
+        {
+          "input": "7\n-553984391 -859877108 -30843985 -486305199 -355764208 -537285439 -913844837\n",
+          "expected": "3676217197\n"
+        },
+        {
+          "input": "2\n560086598 997103156\n",
+          "expected": "1557189754\n"
+        },
+        {
+          "input": "6\n-443398252 -593929182 994878249 767387549 431113087 -210699872\n",
+          "expected": "3020006447\n"
+        },
+        {
+          "input": "2\n618332973 572975997\n",
+          "expected": "1191308970\n"
+        },
+        {
+          "input": "8\n-475837603 -82170153 -873850245 -944923952 -223116611 -982568668 136001110 103053122\n",
+          "expected": "3821521464\n"
+        },
+        {
+          "input": "5\n707043952 356665456 737184809 735866505 -361237061\n",
+          "expected": "2184666871\n"
+        },
+        {
+          "input": "2\n-912639669 -724385493\n",
+          "expected": "1637025162\n"
+        }
+      ],
+      "tests_identity": "07692ea9b85593ffb2470f2f9139b35d3ea0e31bf6ea1ae02c5f4d5812d42e8c"
+    },
+    "a32ce6db39134b8b6095f68bc35cb9add8430488d589465e18164f6dfc3c3dc6": {
+      "status": "independently_checked",
+      "sample_id": "58902",
+      "domain_description": "1<=N<=1e9; 2<=K<=10",
+      "pilot_coverage": "Integer division oracle; boundaries at exact powers and their neighbors",
+      "specification": {
+        "sample_id": "58902",
+        "task": "abc156_b",
+        "title": "Digits",
+        "url": "https://atcoder.jp/contests/abc156/tasks/abc156_b?lang=en",
+        "constraints": "1<=N<=1e9; 2<=K<=10",
+        "pilot_coverage": "Integer division oracle; boundaries at exact powers and their neighbors",
+        "snapshot": "data/cache/task-statements/58902.html",
+        "sha256": "bfb4be404dd02bb79d30e3b7dc05416c420b226cd93847600b6c8a3c491af4d1",
+        "retrieved_date": "2026-09-29",
+        "mapping_basis": "Exact official sample match and code/contract review. Task attribution is reconstructed, not supplied by authors.",
+        "mapping_review": "AI-assisted coordinator; independent human review pending"
+      },
+      "oracle_implementation": "src/prismqa/calibration_oracles.py",
+      "oracle_identity": "0d1f70d7afa402b5ea69209c44e285d5263715e4baf1f36d90dadd0415f05bd5",
+      "oracle_evidence": "Specification-derived oracle; exhaustive alternative searches where needed; official sample checked; no source/target calls.",
+      "reviewer": "AI-assisted coordinator, not an independent human reviewer",
+      "tests": [
+        {
+          "input": "1 2\n",
+          "expected": "1\n"
+        },
+        {
+          "input": "1 3\n",
+          "expected": "1\n"
+        },
+        {
+          "input": "1 4\n",
+          "expected": "1\n"
+        },
+        {
+          "input": "1 5\n",
+          "expected": "1\n"
+        },
+        {
+          "input": "1 6\n",
+          "expected": "1\n"
+        },
+        {
+          "input": "1 7\n",
+          "expected": "1\n"
+        },
+        {
+          "input": "1 8\n",
+          "expected": "1\n"
+        },
+        {
+          "input": "1 9\n",
+          "expected": "1\n"
+        },
+        {
+          "input": "1 10\n",
+          "expected": "1\n"
+        },
+        {
+          "input": "1000000000 2\n",
+          "expected": "30\n"
+        },
+        {
+          "input": "1000000000 3\n",
+          "expected": "19\n"
+        },
+        {
+          "input": "1000000000 4\n",
+          "expected": "15\n"
+        },
+        {
+          "input": "1000000000 5\n",
+          "expected": "13\n"
+        },
+        {
+          "input": "1000000000 6\n",
+          "expected": "12\n"
+        },
+        {
+          "input": "1000000000 7\n",
+          "expected": "11\n"
+        },
+        {
+          "input": "1000000000 8\n",
+          "expected": "10\n"
+        },
+        {
+          "input": "1000000000 9\n",
+          "expected": "10\n"
+        },
+        {
+          "input": "1000000000 10\n",
+          "expected": "10\n"
+        },
+        {
+          "input": "2 2\n",
+          "expected": "2\n"
+        },
+        {
+          "input": "3 2\n",
+          "expected": "2\n"
+        },
+        {
+          "input": "4 2\n",
+          "expected": "3\n"
+        },
+        {
+          "input": "5 2\n",
+          "expected": "3\n"
+        },
+        {
+          "input": "31 2\n",
+          "expected": "5\n"
+        },
+        {
+          "input": "32 2\n",
+          "expected": "6\n"
+        },
+        {
+          "input": "33 2\n",
+          "expected": "6\n"
+        },
+        {
+          "input": "2 3\n",
+          "expected": "1\n"
+        },
+        {
+          "input": "3 3\n",
+          "expected": "2\n"
+        },
+        {
+          "input": "4 3\n",
+          "expected": "2\n"
+        },
+        {
+          "input": "8 3\n",
+          "expected": "2\n"
+        },
+        {
+          "input": "9 3\n",
+          "expected": "3\n"
+        },
+        {
+          "input": "10 3\n",
+          "expected": "3\n"
+        },
+        {
+          "input": "242 3\n",
+          "expected": "5\n"
+        },
+        {
+          "input": "243 3\n",
+          "expected": "6\n"
+        },
+        {
+          "input": "244 3\n",
+          "expected": "6\n"
+        },
+        {
+          "input": "3 4\n",
+          "expected": "1\n"
+        },
+        {
+          "input": "4 4\n",
+          "expected": "2\n"
+        },
+        {
+          "input": "5 4\n",
+          "expected": "2\n"
+        },
+        {
+          "input": "15 4\n",
+          "expected": "2\n"
+        },
+        {
+          "input": "16 4\n",
+          "expected": "3\n"
+        },
+        {
+          "input": "17 4\n",
+          "expected": "3\n"
+        },
+        {
+          "input": "1023 4\n",
+          "expected": "5\n"
+        },
+        {
+          "input": "1024 4\n",
+          "expected": "6\n"
+        },
+        {
+          "input": "1025 4\n",
+          "expected": "6\n"
+        },
+        {
+          "input": "4 5\n",
+          "expected": "1\n"
+        },
+        {
+          "input": "5 5\n",
+          "expected": "2\n"
+        },
+        {
+          "input": "6 5\n",
+          "expected": "2\n"
+        },
+        {
+          "input": "24 5\n",
+          "expected": "2\n"
+        },
+        {
+          "input": "25 5\n",
+          "expected": "3\n"
+        },
+        {
+          "input": "26 5\n",
+          "expected": "3\n"
+        },
+        {
+          "input": "3124 5\n",
+          "expected": "5\n"
+        },
+        {
+          "input": "3125 5\n",
+          "expected": "6\n"
+        },
+        {
+          "input": "3126 5\n",
+          "expected": "6\n"
+        },
+        {
+          "input": "5 6\n",
+          "expected": "1\n"
+        },
+        {
+          "input": "6 6\n",
+          "expected": "2\n"
+        },
+        {
+          "input": "7 6\n",
+          "expected": "2\n"
+        },
+        {
+          "input": "35 6\n",
+          "expected": "2\n"
+        },
+        {
+          "input": "36 6\n",
+          "expected": "3\n"
+        },
+        {
+          "input": "37 6\n",
+          "expected": "3\n"
+        },
+        {
+          "input": "7775 6\n",
+          "expected": "5\n"
+        },
+        {
+          "input": "7776 6\n",
+          "expected": "6\n"
+        },
+        {
+          "input": "7777 6\n",
+          "expected": "6\n"
+        },
+        {
+          "input": "6 7\n",
+          "expected": "1\n"
+        },
+        {
+          "input": "7 7\n",
+          "expected": "2\n"
+        },
+        {
+          "input": "8 7\n",
+          "expected": "2\n"
+        },
+        {
+          "input": "48 7\n",
+          "expected": "2\n"
+        },
+        {
+          "input": "49 7\n",
+          "expected": "3\n"
+        },
+        {
+          "input": "50 7\n",
+          "expected": "3\n"
+        },
+        {
+          "input": "16806 7\n",
+          "expected": "5\n"
+        },
+        {
+          "input": "16807 7\n",
+          "expected": "6\n"
+        },
+        {
+          "input": "16808 7\n",
+          "expected": "6\n"
+        },
+        {
+          "input": "7 8\n",
+          "expected": "1\n"
+        },
+        {
+          "input": "8 8\n",
+          "expected": "2\n"
+        },
+        {
+          "input": "9 8\n",
+          "expected": "2\n"
+        },
+        {
+          "input": "63 8\n",
+          "expected": "2\n"
+        },
+        {
+          "input": "64 8\n",
+          "expected": "3\n"
+        },
+        {
+          "input": "65 8\n",
+          "expected": "3\n"
+        },
+        {
+          "input": "32767 8\n",
+          "expected": "5\n"
+        },
+        {
+          "input": "32768 8\n",
+          "expected": "6\n"
+        },
+        {
+          "input": "32769 8\n",
+          "expected": "6\n"
+        },
+        {
+          "input": "8 9\n",
+          "expected": "1\n"
+        },
+        {
+          "input": "9 9\n",
+          "expected": "2\n"
+        },
+        {
+          "input": "10 9\n",
+          "expected": "2\n"
+        },
+        {
+          "input": "80 9\n",
+          "expected": "2\n"
+        },
+        {
+          "input": "81 9\n",
+          "expected": "3\n"
+        },
+        {
+          "input": "82 9\n",
+          "expected": "3\n"
+        },
+        {
+          "input": "59048 9\n",
+          "expected": "5\n"
+        },
+        {
+          "input": "59049 9\n",
+          "expected": "6\n"
+        },
+        {
+          "input": "59050 9\n",
+          "expected": "6\n"
+        },
+        {
+          "input": "9 10\n",
+          "expected": "1\n"
+        },
+        {
+          "input": "10 10\n",
+          "expected": "2\n"
+        },
+        {
+          "input": "11 10\n",
+          "expected": "2\n"
+        },
+        {
+          "input": "99 10\n",
+          "expected": "2\n"
+        },
+        {
+          "input": "100 10\n",
+          "expected": "3\n"
+        },
+        {
+          "input": "101 10\n",
+          "expected": "3\n"
+        },
+        {
+          "input": "99999 10\n",
+          "expected": "5\n"
+        },
+        {
+          "input": "100000 10\n",
+          "expected": "6\n"
+        },
+        {
+          "input": "100001 10\n",
+          "expected": "6\n"
+        }
+      ],
+      "tests_identity": "d2805fef24e09de246ea31c7d70e32c6ab61a3572b1f2a971b4bef85ab093522"
+    },
+    "167d94c6104feae8b0d8439aef3c72470a428240424b71d6ca6cb11a8a331b59": {
+      "status": "independently_checked",
+      "sample_id": "59448",
+      "domain_description": "1<=r<=100",
+      "pilot_coverage": "All valid radii, except original test",
+      "specification": {
+        "sample_id": "59448",
+        "task": "abc145_a",
+        "title": "Circle",
+        "url": "https://atcoder.jp/contests/abc145/tasks/abc145_a?lang=en",
+        "constraints": "1<=r<=100",
+        "pilot_coverage": "All valid radii, except original test",
+        "snapshot": "data/cache/task-statements/59448.html",
+        "sha256": "8fa16fe2a9178442dc7339ed0e219ec31c830b4969ad4c07d238ebf733d2dbcc",
+        "retrieved_date": "2026-09-29",
+        "mapping_basis": "Exact official sample match and code/contract review. Task attribution is reconstructed, not supplied by authors.",
+        "mapping_review": "AI-assisted coordinator; independent human review pending"
+      },
+      "oracle_implementation": "src/prismqa/calibration_oracles.py",
+      "oracle_identity": "0d1f70d7afa402b5ea69209c44e285d5263715e4baf1f36d90dadd0415f05bd5",
+      "oracle_evidence": "Specification-derived oracle; exhaustive alternative searches where needed; official sample checked; no source/target calls.",
+      "reviewer": "AI-assisted coordinator, not an independent human reviewer",
+      "tests": [
+        {
+          "input": "1\n",
+          "expected": "1\n"
+        },
+        {
+          "input": "3\n",
+          "expected": "9\n"
+        },
+        {
+          "input": "4\n",
+          "expected": "16\n"
+        },
+        {
+          "input": "5\n",
+          "expected": "25\n"
+        },
+        {
+          "input": "6\n",
+          "expected": "36\n"
+        },
+        {
+          "input": "7\n",
+          "expected": "49\n"
+        },
+        {
+          "input": "8\n",
+          "expected": "64\n"
+        },
+        {
+          "input": "9\n",
+          "expected": "81\n"
+        },
+        {
+          "input": "10\n",
+          "expected": "100\n"
+        },
+        {
+          "input": "11\n",
+          "expected": "121\n"
+        },
+        {
+          "input": "12\n",
+          "expected": "144\n"
+        },
+        {
+          "input": "13\n",
+          "expected": "169\n"
+        },
+        {
+          "input": "14\n",
+          "expected": "196\n"
+        },
+        {
+          "input": "15\n",
+          "expected": "225\n"
+        },
+        {
+          "input": "16\n",
+          "expected": "256\n"
+        },
+        {
+          "input": "17\n",
+          "expected": "289\n"
+        },
+        {
+          "input": "18\n",
+          "expected": "324\n"
+        },
+        {
+          "input": "19\n",
+          "expected": "361\n"
+        },
+        {
+          "input": "20\n",
+          "expected": "400\n"
+        },
+        {
+          "input": "21\n",
+          "expected": "441\n"
+        },
+        {
+          "input": "22\n",
+          "expected": "484\n"
+        },
+        {
+          "input": "23\n",
+          "expected": "529\n"
+        },
+        {
+          "input": "24\n",
+          "expected": "576\n"
+        },
+        {
+          "input": "25\n",
+          "expected": "625\n"
+        },
+        {
+          "input": "26\n",
+          "expected": "676\n"
+        },
+        {
+          "input": "27\n",
+          "expected": "729\n"
+        },
+        {
+          "input": "28\n",
+          "expected": "784\n"
+        },
+        {
+          "input": "29\n",
+          "expected": "841\n"
+        },
+        {
+          "input": "30\n",
+          "expected": "900\n"
+        },
+        {
+          "input": "31\n",
+          "expected": "961\n"
+        },
+        {
+          "input": "32\n",
+          "expected": "1024\n"
+        },
+        {
+          "input": "33\n",
+          "expected": "1089\n"
+        },
+        {
+          "input": "34\n",
+          "expected": "1156\n"
+        },
+        {
+          "input": "35\n",
+          "expected": "1225\n"
+        },
+        {
+          "input": "36\n",
+          "expected": "1296\n"
+        },
+        {
+          "input": "37\n",
+          "expected": "1369\n"
+        },
+        {
+          "input": "38\n",
+          "expected": "1444\n"
+        },
+        {
+          "input": "39\n",
+          "expected": "1521\n"
+        },
+        {
+          "input": "40\n",
+          "expected": "1600\n"
+        },
+        {
+          "input": "41\n",
+          "expected": "1681\n"
+        },
+        {
+          "input": "42\n",
+          "expected": "1764\n"
+        },
+        {
+          "input": "43\n",
+          "expected": "1849\n"
+        },
+        {
+          "input": "44\n",
+          "expected": "1936\n"
+        },
+        {
+          "input": "45\n",
+          "expected": "2025\n"
+        },
+        {
+          "input": "46\n",
+          "expected": "2116\n"
+        },
+        {
+          "input": "47\n",
+          "expected": "2209\n"
+        },
+        {
+          "input": "48\n",
+          "expected": "2304\n"
+        },
+        {
+          "input": "49\n",
+          "expected": "2401\n"
+        },
+        {
+          "input": "50\n",
+          "expected": "2500\n"
+        },
+        {
+          "input": "51\n",
+          "expected": "2601\n"
+        },
+        {
+          "input": "52\n",
+          "expected": "2704\n"
+        },
+        {
+          "input": "53\n",
+          "expected": "2809\n"
+        },
+        {
+          "input": "54\n",
+          "expected": "2916\n"
+        },
+        {
+          "input": "55\n",
+          "expected": "3025\n"
+        },
+        {
+          "input": "56\n",
+          "expected": "3136\n"
+        },
+        {
+          "input": "57\n",
+          "expected": "3249\n"
+        },
+        {
+          "input": "58\n",
+          "expected": "3364\n"
+        },
+        {
+          "input": "59\n",
+          "expected": "3481\n"
+        },
+        {
+          "input": "60\n",
+          "expected": "3600\n"
+        },
+        {
+          "input": "61\n",
+          "expected": "3721\n"
+        },
+        {
+          "input": "62\n",
+          "expected": "3844\n"
+        },
+        {
+          "input": "63\n",
+          "expected": "3969\n"
+        },
+        {
+          "input": "64\n",
+          "expected": "4096\n"
+        },
+        {
+          "input": "65\n",
+          "expected": "4225\n"
+        },
+        {
+          "input": "66\n",
+          "expected": "4356\n"
+        },
+        {
+          "input": "67\n",
+          "expected": "4489\n"
+        },
+        {
+          "input": "68\n",
+          "expected": "4624\n"
+        },
+        {
+          "input": "69\n",
+          "expected": "4761\n"
+        },
+        {
+          "input": "70\n",
+          "expected": "4900\n"
+        },
+        {
+          "input": "71\n",
+          "expected": "5041\n"
+        },
+        {
+          "input": "72\n",
+          "expected": "5184\n"
+        },
+        {
+          "input": "73\n",
+          "expected": "5329\n"
+        },
+        {
+          "input": "74\n",
+          "expected": "5476\n"
+        },
+        {
+          "input": "75\n",
+          "expected": "5625\n"
+        },
+        {
+          "input": "76\n",
+          "expected": "5776\n"
+        },
+        {
+          "input": "77\n",
+          "expected": "5929\n"
+        },
+        {
+          "input": "78\n",
+          "expected": "6084\n"
+        },
+        {
+          "input": "79\n",
+          "expected": "6241\n"
+        },
+        {
+          "input": "80\n",
+          "expected": "6400\n"
+        },
+        {
+          "input": "81\n",
+          "expected": "6561\n"
+        },
+        {
+          "input": "82\n",
+          "expected": "6724\n"
+        },
+        {
+          "input": "83\n",
+          "expected": "6889\n"
+        },
+        {
+          "input": "84\n",
+          "expected": "7056\n"
+        },
+        {
+          "input": "85\n",
+          "expected": "7225\n"
+        },
+        {
+          "input": "86\n",
+          "expected": "7396\n"
+        },
+        {
+          "input": "87\n",
+          "expected": "7569\n"
+        },
+        {
+          "input": "88\n",
+          "expected": "7744\n"
+        },
+        {
+          "input": "89\n",
+          "expected": "7921\n"
+        },
+        {
+          "input": "90\n",
+          "expected": "8100\n"
+        },
+        {
+          "input": "91\n",
+          "expected": "8281\n"
+        },
+        {
+          "input": "92\n",
+          "expected": "8464\n"
+        },
+        {
+          "input": "93\n",
+          "expected": "8649\n"
+        },
+        {
+          "input": "94\n",
+          "expected": "8836\n"
+        },
+        {
+          "input": "95\n",
+          "expected": "9025\n"
+        },
+        {
+          "input": "96\n",
+          "expected": "9216\n"
+        },
+        {
+          "input": "97\n",
+          "expected": "9409\n"
+        },
+        {
+          "input": "98\n",
+          "expected": "9604\n"
+        },
+        {
+          "input": "99\n",
+          "expected": "9801\n"
+        },
+        {
+          "input": "100\n",
+          "expected": "10000\n"
+        }
+      ],
+      "tests_identity": "f97f1fe583c15a3b88a46d4843c09b8a4fa68cb627fb5b562987072576359eba"
+    },
+    "7adeced57e508e12d7b17dcfbc4939ee634683c3fbe3e2966c76c8ed50efcf59": {
+      "status": "independently_checked",
+      "sample_id": "60194",
+      "domain_description": "1<=N,M,Ai<=100000; 1<=Bi<=10000",
+      "pilot_coverage": "N<=8 and M<=6 for exhaustive schedule search",
+      "specification": {
+        "sample_id": "60194",
+        "task": "abc137_d",
+        "title": "Summer Vacation",
+        "url": "https://atcoder.jp/contests/abc137/tasks/abc137_d?lang=en",
+        "constraints": "1<=N,M,Ai<=100000; 1<=Bi<=10000",
+        "pilot_coverage": "N<=8 and M<=6 for exhaustive schedule search",
+        "snapshot": "data/cache/task-statements/60194.html",
+        "sha256": "2584cda400355e8b2b2274ac3e72e4237acbdeb877e2c11965ab297ebb789dc5",
+        "retrieved_date": "2026-09-29",
+        "mapping_basis": "Exact official sample match and code/contract review. Task attribution is reconstructed, not supplied by authors.",
+        "mapping_review": "AI-assisted coordinator; independent human review pending"
+      },
+      "oracle_implementation": "src/prismqa/calibration_oracles.py",
+      "oracle_identity": "0d1f70d7afa402b5ea69209c44e285d5263715e4baf1f36d90dadd0415f05bd5",
+      "oracle_evidence": "Specification-derived oracle; exhaustive alternative searches where needed; official sample checked; no source/target calls.",
+      "reviewer": "AI-assisted coordinator, not an independent human reviewer",
+      "tests": [
+        {
+          "input": "1 1\n2 1\n",
+          "expected": "0\n"
+        },
+        {
+          "input": "1 1\n1 10000\n",
+          "expected": "10000\n"
+        },
+        {
+          "input": "2 2\n1 1\n1 10000\n",
+          "expected": "10001\n"
+        },
+        {
+          "input": "1 6\n100000 10000\n",
+          "expected": "0\n"
+        },
+        {
+          "input": "5 3\n1 2\n1 3\n1 4\n2 1\n2 3\n",
+          "expected": "10\n"
+        },
+        {
+          "input": "6 4\n4 8753\n3 5150\n2 1059\n2 1033\n7 61\n8 2257\n",
+          "expected": "14962\n"
+        },
+        {
+          "input": "6 4\n1 7270\n2 1117\n1 681\n4 6995\n9 275\n9 3989\n",
+          "expected": "16063\n"
+        },
+        {
+          "input": "8 1\n9 2356\n1 7104\n5 1353\n9 4352\n9 4051\n7 7369\n7 8237\n1 3824\n",
+          "expected": "7104\n"
+        },
+        {
+          "input": "4 2\n8 1253\n2 8073\n7 8625\n6 6055\n",
+          "expected": "8073\n"
+        },
+        {
+          "input": "6 5\n6 8104\n5 6062\n8 294\n2 4377\n9 3369\n1 8179\n",
+          "expected": "18618\n"
+        },
+        {
+          "input": "2 5\n4 9271\n1 5424\n",
+          "expected": "14695\n"
+        },
+        {
+          "input": "8 4\n7 8234\n3 3845\n7 3997\n9 9837\n8 8405\n2 6632\n4 4408\n2 6003\n",
+          "expected": "17043\n"
+        },
+        {
+          "input": "6 5\n2 3375\n3 1072\n4 1831\n9 8369\n6 7723\n4 5773\n",
+          "expected": "12051\n"
+        },
+        {
+          "input": "5 3\n7 7210\n6 1828\n4 5225\n3 3321\n9 6519\n",
+          "expected": "3321\n"
+        },
+        {
+          "input": "5 6\n1 7190\n3 6559\n3 570\n2 3883\n1 3047\n",
+          "expected": "21249\n"
+        },
+        {
+          "input": "6 1\n4 2347\n4 7415\n1 3785\n9 5660\n4 1535\n3 336\n",
+          "expected": "3785\n"
+        },
+        {
+          "input": "5 4\n5 83\n3 6992\n8 629\n9 9431\n5 5654\n",
+          "expected": "6992\n"
+        },
+        {
+          "input": "5 3\n8 1236\n4 2132\n7 6530\n1 3273\n4 3604\n",
+          "expected": "3273\n"
+        },
+        {
+          "input": "8 2\n8 7781\n6 9582\n7 4998\n1 9058\n8 4984\n4 5253\n4 7130\n7 1527\n",
+          "expected": "9058\n"
+        },
+        {
+          "input": "1 1\n7 3985\n",
+          "expected": "0\n"
+        },
+        {
+          "input": "6 5\n9 5424\n1 2183\n9 5360\n1 3829\n5 5318\n4 5640\n",
+          "expected": "16970\n"
+        },
+        {
+          "input": "7 1\n5 9147\n7 2184\n5 3567\n5 7326\n4 2553\n7 9184\n8 9060\n",
+          "expected": "0\n"
+        },
+        {
+          "input": "7 2\n7 7954\n6 7767\n5 2633\n2 2182\n6 3811\n8 8083\n7 1376\n",
+          "expected": "2182\n"
+        },
+        {
+          "input": "2 4\n8 8557\n7 269\n",
+          "expected": "0\n"
+        },
+        {
+          "input": "3 1\n4 3048\n2 1538\n3 5482\n",
+          "expected": "0\n"
+        },
+        {
+          "input": "7 1\n4 4654\n3 7998\n1 3332\n6 3048\n5 7165\n2 3401\n7 6556\n",
+          "expected": "3332\n"
+        },
+        {
+          "input": "2 4\n8 7667\n7 8324\n",
+          "expected": "0\n"
+        },
+        {
+          "input": "4 4\n6 2253\n8 7573\n7 1240\n8 984\n",
+          "expected": "0\n"
+        },
+        {
+          "input": "7 3\n3 2472\n8 9262\n1 8154\n9 8395\n1 3874\n1 6264\n1 6925\n",
+          "expected": "21343\n"
+        },
+        {
+          "input": "8 2\n6 9053\n4 3655\n4 2760\n5 9205\n6 5346\n6 8753\n2 4760\n9 5079\n",
+          "expected": "4760\n"
+        },
+        {
+          "input": "1 4\n6 2126\n",
+          "expected": "0\n"
+        },
+        {
+          "input": "4 4\n9 2529\n7 5577\n2 2233\n8 294\n",
+          "expected": "2233\n"
+        },
+        {
+          "input": "7 3\n1 7604\n4 531\n7 5997\n9 6959\n7 1118\n1 4323\n1 8643\n",
+          "expected": "20570\n"
+        },
+        {
+          "input": "8 2\n4 1768\n2 9617\n8 5923\n6 3904\n4 2545\n5 6357\n8 2483\n8 8558\n",
+          "expected": "9617\n"
+        },
+        {
+          "input": "6 2\n6 8742\n6 1001\n7 2179\n6 2070\n5 5853\n9 9478\n",
+          "expected": "0\n"
+        },
+        {
+          "input": "6 3\n8 9922\n3 1129\n8 8939\n6 5990\n4 9309\n4 5473\n",
+          "expected": "1129\n"
+        },
+        {
+          "input": "8 1\n4 7029\n9 262\n5 1846\n4 308\n1 5317\n7 7762\n6 9172\n2 7571\n",
+          "expected": "5317\n"
+        },
+        {
+          "input": "4 4\n1 2409\n2 6912\n4 9854\n9 7568\n",
+          "expected": "19175\n"
+        },
+        {
+          "input": "1 6\n7 3201\n",
+          "expected": "0\n"
+        },
+        {
+          "input": "1 2\n5 1913\n",
+          "expected": "0\n"
+        }
+      ],
+      "tests_identity": "843f4d65239959c80da96153713c350e659b832c7611b5f4d155c0679f3f779d"
+    },
+    "b51a98110c0f4fa5d133fced34886a658a06bb148b6ae02b59e8347724e90bb6": {
+      "status": "independently_checked",
+      "sample_id": "60265",
+      "domain_description": "101<=X<=1e18",
+      "pilot_coverage": "Exact rational compound-interest schedule; lower/upper boundaries",
+      "specification": {
+        "sample_id": "60265",
+        "task": "abc165_b",
+        "title": "1%",
+        "url": "https://atcoder.jp/contests/abc165/tasks/abc165_b?lang=en",
+        "constraints": "101<=X<=1e18",
+        "pilot_coverage": "Exact rational compound-interest schedule; lower/upper boundaries",
+        "snapshot": "data/cache/task-statements/60265.html",
+        "sha256": "0f477fb0b36f178d24bcec3422d869c4ba036e30ef4da851941e8ec8c83f15a2",
+        "retrieved_date": "2026-09-29",
+        "mapping_basis": "Exact official sample match and code/contract review. Task attribution is reconstructed, not supplied by authors.",
+        "mapping_review": "AI-assisted coordinator; independent human review pending"
+      },
+      "oracle_implementation": "src/prismqa/calibration_oracles.py",
+      "oracle_identity": "0d1f70d7afa402b5ea69209c44e285d5263715e4baf1f36d90dadd0415f05bd5",
+      "oracle_evidence": "Specification-derived oracle; exhaustive alternative searches where needed; official sample checked; no source/target calls.",
+      "reviewer": "AI-assisted coordinator, not an independent human reviewer",
+      "tests": [
+        {
+          "input": "101\n",
+          "expected": "1\n"
+        },
+        {
+          "input": "102\n",
+          "expected": "2\n"
+        },
+        {
+          "input": "199\n",
+          "expected": "99\n"
+        },
+        {
+          "input": "200\n",
+          "expected": "100\n"
+        },
+        {
+          "input": "201\n",
+          "expected": "101\n"
+        },
+        {
+          "input": "202\n",
+          "expected": "101\n"
+        },
+        {
+          "input": "1000000000000000000\n",
+          "expected": "3760\n"
+        },
+        {
+          "input": "1333333333\n",
+          "expected": "1706\n"
+        },
+        {
+          "input": "219930530329843457\n",
+          "expected": "3608\n"
+        },
+        {
+          "input": "248271968707003490\n",
+          "expected": "3620\n"
+        },
+        {
+          "input": "632531969241854185\n",
+          "expected": "3714\n"
+        },
+        {
+          "input": "483681272178929834\n",
+          "expected": "3687\n"
+        },
+        {
+          "input": "274604620163974357\n",
+          "expected": "3630\n"
+        },
+        {
+          "input": "38519581027052680\n",
+          "expected": "3433\n"
+        },
+        {
+          "input": "862910334128760850\n",
+          "expected": "3745\n"
+        },
+        {
+          "input": "117586703782289539\n",
+          "expected": "3545\n"
+        },
+        {
+          "input": "619894371815835763\n",
+          "expected": "3712\n"
+        },
+        {
+          "input": "948400202593876220\n",
+          "expected": "3755\n"
+        },
+        {
+          "input": "958790129744958470\n",
+          "expected": "3756\n"
+        },
+        {
+          "input": "657007576278399734\n",
+          "expected": "3718\n"
+        },
+        {
+          "input": "261839649980061172\n",
+          "expected": "3625\n"
+        },
+        {
+          "input": "687540220840940156\n",
+          "expected": "3722\n"
+        },
+        {
+          "input": "296341214995042988\n",
+          "expected": "3638\n"
+        },
+        {
+          "input": "222152980962209375\n",
+          "expected": "3609\n"
+        },
+        {
+          "input": "509684570791505781\n",
+          "expected": "3692\n"
+        },
+        {
+          "input": "304780018239925240\n",
+          "expected": "3641\n"
+        },
+        {
+          "input": "354375468340342575\n",
+          "expected": "3656\n"
+        },
+        {
+          "input": "524855743574392531\n",
+          "expected": "3695\n"
+        },
+        {
+          "input": "156364448409390649\n",
+          "expected": "3574\n"
+        },
+        {
+          "input": "759629365802484374\n",
+          "expected": "3732\n"
+        },
+        {
+          "input": "796067311036100380\n",
+          "expected": "3737\n"
+        },
+        {
+          "input": "654271632108299299\n",
+          "expected": "3717\n"
+        },
+        {
+          "input": "752616110703638193\n",
+          "expected": "3732\n"
+        },
+        {
+          "input": "900152261934345548\n",
+          "expected": "3749\n"
+        },
+        {
+          "input": "882630977383092429\n",
+          "expected": "3748\n"
+        },
+        {
+          "input": "61592456971765180\n",
+          "expected": "3480\n"
+        },
+        {
+          "input": "562742173980766066\n",
+          "expected": "3702\n"
+        },
+        {
+          "input": "570994333202414788\n",
+          "expected": "3704\n"
+        },
+        {
+          "input": "699417027127533157\n",
+          "expected": "3724\n"
+        }
+      ],
+      "tests_identity": "d6b95898730c0bf9e2cce7099873791a9c004704ef8fc6bf0d7b787ae0ba5ebb"
+    },
+    "bd15638879985a2233696e6c41c0333802adab231ff5351d2a28f65e89e42414": {
+      "status": "independently_checked",
+      "sample_id": "60797",
+      "domain_description": "2<=N<=10; 1<=M<=10; 1<=Q<=50; 1<=a<b<=N; 0<=c<M; unique (a,b,c); 1<=d<=100000",
+      "pilot_coverage": "N,M<=5 for Cartesian enumeration",
+      "specification": {
+        "sample_id": "60797",
+        "task": "abc165_c",
+        "title": "Many Requirements",
+        "url": "https://atcoder.jp/contests/abc165/tasks/abc165_c?lang=en",
+        "constraints": "2<=N<=10; 1<=M<=10; 1<=Q<=50; 1<=a<b<=N; 0<=c<M; unique (a,b,c); 1<=d<=100000",
+        "pilot_coverage": "N,M<=5 for Cartesian enumeration",
+        "snapshot": "data/cache/task-statements/60797.html",
+        "sha256": "ae54d2a2aba5603f510ff323db9bfd3b72b8fcdd523d172e19dea2ffe2417780",
+        "retrieved_date": "2026-09-29",
+        "mapping_basis": "Exact official sample match and code/contract review. Task attribution is reconstructed, not supplied by authors.",
+        "mapping_review": "AI-assisted coordinator; independent human review pending"
+      },
+      "oracle_implementation": "src/prismqa/calibration_oracles.py",
+      "oracle_identity": "0d1f70d7afa402b5ea69209c44e285d5263715e4baf1f36d90dadd0415f05bd5",
+      "oracle_evidence": "Specification-derived oracle; exhaustive alternative searches where needed; official sample checked; no source/target calls.",
+      "reviewer": "AI-assisted coordinator, not an independent human reviewer",
+      "tests": [
+        {
+          "input": "2 1 1\n1 2 0 100000\n",
+          "expected": "100000\n"
+        },
+        {
+          "input": "2 2 1\n1 2 1 1\n",
+          "expected": "1\n"
+        },
+        {
+          "input": "3 1 3\n2 3 0 20406\n1 2 0 22108\n1 3 0 47047\n",
+          "expected": "89561\n"
+        },
+        {
+          "input": "4 1 6\n1 2 0 61307\n1 4 0 80854\n3 4 0 38005\n2 3 0 71357\n1 3 0 3046\n2 4 0 4816\n",
+          "expected": "259385\n"
+        },
+        {
+          "input": "4 1 5\n2 4 0 45444\n3 4 0 68802\n1 3 0 79790\n1 2 0 79726\n1 4 0 79202\n",
+          "expected": "352964\n"
+        },
+        {
+          "input": "4 1 4\n1 4 0 75231\n2 4 0 6744\n2 3 0 79140\n1 2 0 22068\n",
+          "expected": "183183\n"
+        },
+        {
+          "input": "5 5 5\n1 4 2 74447\n3 5 3 84322\n1 5 4 96088\n1 2 3 76088\n2 3 3 70318\n",
+          "expected": "254857\n"
+        },
+        {
+          "input": "4 1 1\n1 3 0 70627\n",
+          "expected": "70627\n"
+        },
+        {
+          "input": "3 5 6\n1 2 0 14512\n1 2 3 63166\n2 3 1 55617\n1 2 1 43825\n2 3 3 13500\n2 3 4 87184\n",
+          "expected": "118783\n"
+        },
+        {
+          "input": "2 3 3\n1 2 1 72824\n1 2 2 83482\n1 2 0 23\n",
+          "expected": "83482\n"
+        },
+        {
+          "input": "5 3 5\n1 3 1 89959\n1 5 0 43597\n2 3 2 58416\n2 5 2 33719\n2 4 0 68387\n",
+          "expected": "158346\n"
+        },
+        {
+          "input": "4 3 5\n2 3 2 46994\n3 4 0 66965\n1 3 0 29754\n1 2 0 78891\n1 4 1 65717\n",
+          "expected": "211573\n"
+        },
+        {
+          "input": "4 1 1\n2 4 0 89648\n",
+          "expected": "89648\n"
+        },
+        {
+          "input": "4 2 11\n1 4 0 24236\n1 3 0 86603\n1 3 1 98781\n1 4 1 92128\n2 4 1 8737\n3 4 1 6168\n1 2 0 71938\n2 4 0 61478\n2 3 0 93694\n3 4 0 68563\n1 2 1 6258\n",
+          "expected": "420902\n"
+        },
+        {
+          "input": "2 5 4\n1 2 1 4103\n1 2 4 23240\n1 2 3 36812\n1 2 2 97482\n",
+          "expected": "97482\n"
+        },
+        {
+          "input": "4 3 7\n2 3 2 72107\n2 4 2 89715\n3 4 1 17363\n1 2 0 43477\n3 4 2 58757\n1 3 1 78970\n3 4 0 6129\n",
+          "expected": "229525\n"
+        },
+        {
+          "input": "5 5 11\n1 5 4 32824\n1 3 4 86199\n2 5 2 59059\n2 3 4 66600\n1 4 4 48370\n2 4 3 92382\n1 3 0 42782\n4 5 2 54653\n1 5 2 78812\n1 4 0 63575\n3 5 2 81177\n",
+          "expected": "380058\n"
+        },
+        {
+          "input": "2 3 1\n1 2 2 89807\n",
+          "expected": "89807\n"
+        },
+        {
+          "input": "4 5 4\n1 2 1 36503\n2 4 4 65006\n3 4 1 20898\n1 2 2 62028\n",
+          "expected": "85904\n"
+        },
+        {
+          "input": "4 3 11\n1 4 2 61994\n1 2 2 19186\n1 4 0 85026\n2 4 2 42251\n1 2 1 10500\n1 4 1 3213\n2 3 0 94578\n1 3 2 99319\n3 4 0 95801\n2 3 1 60189\n1 3 0 20480\n",
+          "expected": "370878\n"
+        },
+        {
+          "input": "2 2 1\n1 2 1 19148\n",
+          "expected": "19148\n"
+        },
+        {
+          "input": "3 5 11\n1 2 2 99903\n1 2 0 49549\n2 3 0 70989\n1 2 3 85120\n2 3 1 92200\n1 3 2 28472\n2 3 4 25642\n1 3 1 76899\n2 3 2 93626\n1 3 0 59095\n1 2 4 88350\n",
+          "expected": "218648\n"
+        },
+        {
+          "input": "3 3 5\n1 2 0 595\n1 3 0 26110\n2 3 1 23909\n1 2 2 23755\n1 3 1 89734\n",
+          "expected": "114238\n"
+        },
+        {
+          "input": "3 3 5\n2 3 1 14538\n1 2 0 7633\n1 3 2 78249\n1 2 1 49930\n1 2 2 17962\n",
+          "expected": "142717\n"
+        },
+        {
+          "input": "3 4 10\n1 2 3 30868\n2 3 0 65849\n1 2 2 25626\n1 3 0 81904\n1 3 1 97617\n1 3 2 53228\n2 3 1 8661\n2 3 2 98694\n2 3 3 87746\n1 3 3 87356\n",
+          "expected": "186050\n"
+        },
+        {
+          "input": "3 5 10\n1 3 2 76257\n1 3 0 58245\n1 2 4 53074\n2 3 1 84222\n1 3 3 46548\n1 3 4 5315\n1 2 3 17429\n1 2 1 64051\n1 2 2 87003\n1 2 0 43027\n",
+          "expected": "224530\n"
+        },
+        {
+          "input": "5 1 10\n2 5 0 21361\n3 5 0 25095\n3 4 0 35613\n1 4 0 27092\n4 5 0 47214\n1 3 0 53779\n2 4 0 31826\n2 3 0 46811\n1 5 0 66233\n1 2 0 51050\n",
+          "expected": "406074\n"
+        },
+        {
+          "input": "2 3 2\n1 2 2 24107\n1 2 0 23076\n",
+          "expected": "24107\n"
+        },
+        {
+          "input": "5 3 12\n1 2 1 64166\n2 4 2 20827\n3 5 2 64166\n3 4 0 17881\n3 4 2 25950\n2 5 1 50370\n3 4 1 84029\n4 5 1 88122\n2 4 1 52467\n1 4 0 43432\n1 2 0 46430\n3 5 1 196\n",
+          "expected": "335214\n"
+        },
+        {
+          "input": "2 4 3\n1 2 3 33766\n1 2 2 48236\n1 2 1 27420\n",
+          "expected": "48236\n"
+        },
+        {
+          "input": "4 4 4\n1 2 1 62258\n3 4 2 44060\n1 4 3 28006\n2 3 0 15856\n",
+          "expected": "150180\n"
+        },
+        {
+          "input": "2 3 2\n1 2 0 48196\n1 2 1 94609\n",
+          "expected": "94609\n"
+        },
+        {
+          "input": "4 2 7\n1 4 1 42580\n3 4 1 9180\n1 3 1 58651\n2 4 0 8232\n2 3 1 54607\n1 2 1 54113\n2 4 1 11917\n",
+          "expected": "167755\n"
+        },
+        {
+          "input": "5 2 11\n1 2 0 46942\n2 3 1 26221\n3 5 0 4508\n1 4 0 76873\n2 5 1 90037\n2 4 0 53034\n1 4 1 19694\n4 5 0 40707\n1 2 1 65557\n3 4 0 89658\n1 3 1 49343\n",
+          "expected": "367110\n"
+        },
+        {
+          "input": "2 5 4\n1 2 1 96638\n1 2 0 8350\n1 2 3 4458\n1 2 4 86230\n",
+          "expected": "96638\n"
+        },
+        {
+          "input": "2 3 3\n1 2 1 59608\n1 2 0 98514\n1 2 2 30488\n",
+          "expected": "98514\n"
+        },
+        {
+          "input": "4 2 9\n2 3 1 89596\n1 4 0 96052\n1 3 0 88944\n2 3 0 42734\n3 4 1 74618\n1 2 1 50561\n1 3 1 88368\n2 4 0 13064\n1 4 1 39508\n",
+          "expected": "245804\n"
+        },
+        {
+          "input": "3 2 2\n1 3 0 5945\n1 2 0 55544\n",
+          "expected": "61489\n"
+        },
+        {
+          "input": "5 3 11\n2 3 0 83241\n1 4 2 43816\n4 5 0 36748\n2 3 1 31366\n1 3 1 96613\n3 5 1 76538\n3 4 1 44587\n1 3 0 89933\n2 5 0 55775\n2 4 0 58147\n1 5 2 8309\n",
+          "expected": "389852\n"
+        },
+        {
+          "input": "2 3 1\n1 2 2 40703\n",
+          "expected": "40703\n"
+        }
+      ],
+      "tests_identity": "08f307589564a4baa39a2fa68fb884f1d5f8bb79d2552b17e4b0ed46863583f6"
+    },
+    "9dbdc1d183c936fd414aafd0a82fbac413abc805ec4222ea06e05d32eddb5cef": {
+      "status": "independently_checked",
+      "sample_id": "61358",
+      "domain_description": "0<=S<=86400",
+      "pilot_coverage": "Time-unit boundaries",
+      "specification": {
+        "sample_id": "61358",
+        "task": "AOJ_ITP1_1_D",
+        "title": "Watch",
+        "url": "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_1_D&lang=en",
+        "constraints": "0<=S<=86400",
+        "pilot_coverage": "Time-unit boundaries",
+        "snapshot": "data/cache/task-statements/61358.html",
+        "sha256": "4a428e7de3c29510e1dcf69f861fce2badc994d03418127c92f375a643a4b5b6",
+        "retrieved_date": "2026-09-29",
+        "mapping_basis": "Exact official sample match and code/contract review. Task attribution is reconstructed, not supplied by authors.",
+        "mapping_review": "AI-assisted coordinator; independent human review pending"
+      },
+      "oracle_implementation": "src/prismqa/calibration_oracles.py",
+      "oracle_identity": "0d1f70d7afa402b5ea69209c44e285d5263715e4baf1f36d90dadd0415f05bd5",
+      "oracle_evidence": "Specification-derived oracle; exhaustive alternative searches where needed; official sample checked; no source/target calls.",
+      "reviewer": "AI-assisted coordinator, not an independent human reviewer",
+      "tests": [
+        {
+          "input": "0\n",
+          "expected": "0:0:0\n"
+        },
+        {
+          "input": "1\n",
+          "expected": "0:0:1\n"
+        },
+        {
+          "input": "59\n",
+          "expected": "0:0:59\n"
+        },
+        {
+          "input": "60\n",
+          "expected": "0:1:0\n"
+        },
+        {
+          "input": "61\n",
+          "expected": "0:1:1\n"
+        },
+        {
+          "input": "3599\n",
+          "expected": "0:59:59\n"
+        },
+        {
+          "input": "3600\n",
+          "expected": "1:0:0\n"
+        },
+        {
+          "input": "3601\n",
+          "expected": "1:0:1\n"
+        },
+        {
+          "input": "86399\n",
+          "expected": "23:59:59\n"
+        },
+        {
+          "input": "86400\n",
+          "expected": "24:0:0\n"
+        },
+        {
+          "input": "59402\n",
+          "expected": "16:30:2\n"
+        },
+        {
+          "input": "38062\n",
+          "expected": "10:34:22\n"
+        },
+        {
+          "input": "71278\n",
+          "expected": "19:47:58\n"
+        },
+        {
+          "input": "43934\n",
+          "expected": "12:12:14\n"
+        },
+        {
+          "input": "30641\n",
+          "expected": "8:30:41\n"
+        },
+        {
+          "input": "8281\n",
+          "expected": "2:18:1\n"
+        },
+        {
+          "input": "25038\n",
+          "expected": "6:57:18\n"
+        },
+        {
+          "input": "42689\n",
+          "expected": "11:51:29\n"
+        },
+        {
+          "input": "40440\n",
+          "expected": "11:14:0\n"
+        },
+        {
+          "input": "59109\n",
+          "expected": "16:25:9\n"
+        },
+        {
+          "input": "52874\n",
+          "expected": "14:41:14\n"
+        },
+        {
+          "input": "81962\n",
+          "expected": "22:46:2\n"
+        },
+        {
+          "input": "66883\n",
+          "expected": "18:34:43\n"
+        },
+        {
+          "input": "71493\n",
+          "expected": "19:51:33\n"
+        },
+        {
+          "input": "51212\n",
+          "expected": "14:13:32\n"
+        },
+        {
+          "input": "51950\n",
+          "expected": "14:25:50\n"
+        },
+        {
+          "input": "36455\n",
+          "expected": "10:7:35\n"
+        },
+        {
+          "input": "28277\n",
+          "expected": "7:51:17\n"
+        },
+        {
+          "input": "80915\n",
+          "expected": "22:28:35\n"
+        },
+        {
+          "input": "7105\n",
+          "expected": "1:58:25\n"
+        },
+        {
+          "input": "63122\n",
+          "expected": "17:32:2\n"
+        },
+        {
+          "input": "73654\n",
+          "expected": "20:27:34\n"
+        },
+        {
+          "input": "35160\n",
+          "expected": "9:46:0\n"
+        },
+        {
+          "input": "77034\n",
+          "expected": "21:23:54\n"
+        },
+        {
+          "input": "24695\n",
+          "expected": "6:51:35\n"
+        },
+        {
+          "input": "14847\n",
+          "expected": "4:7:27\n"
+        },
+        {
+          "input": "58931\n",
+          "expected": "16:22:11\n"
+        },
+        {
+          "input": "22984\n",
+          "expected": "6:23:4\n"
+        },
+        {
+          "input": "55413\n",
+          "expected": "15:23:33\n"
+        },
+        {
+          "input": "40556\n",
+          "expected": "11:15:56\n"
+        }
+      ],
+      "tests_identity": "e307b671bff790c1a18e36a795002e0fb3397db9983aa745179f478a08792dee"
+    },
+    "f750d6e962272282d14e08de5a119dfd2915e0385a26f9a18c6cabee4cd04034": {
+      "status": "independently_checked",
+      "sample_id": "61692",
+      "domain_description": "1<=N<=999",
+      "pilot_coverage": "Every final digit, one/two/three-digit inputs; declared pronunciation table",
+      "specification": {
+        "sample_id": "61692",
+        "task": "abc168_a",
+        "title": "Therefore",
+        "url": "https://atcoder.jp/contests/abc168/tasks/abc168_a?lang=en",
+        "constraints": "1<=N<=999",
+        "pilot_coverage": "Every final digit, one/two/three-digit inputs; declared pronunciation table",
+        "snapshot": "data/cache/task-statements/61692.html",
+        "sha256": "9680f3f85e3c36a9c190b12eef398f5127d64af8459072f6320ab791f0725001",
+        "retrieved_date": "2026-09-29",
+        "mapping_basis": "Exact official sample match and code/contract review. Task attribution is reconstructed, not supplied by authors.",
+        "mapping_review": "AI-assisted coordinator; independent human review pending"
+      },
+      "oracle_implementation": "src/prismqa/calibration_oracles.py",
+      "oracle_identity": "0d1f70d7afa402b5ea69209c44e285d5263715e4baf1f36d90dadd0415f05bd5",
+      "oracle_evidence": "Specification-derived oracle; exhaustive alternative searches where needed; official sample checked; no source/target calls.",
+      "reviewer": "AI-assisted coordinator, not an independent human reviewer",
+      "tests": [
+        {
+          "input": "1\n",
+          "expected": "pon\n"
+        },
+        {
+          "input": "2\n",
+          "expected": "hon\n"
+        },
+        {
+          "input": "3\n",
+          "expected": "bon\n"
+        },
+        {
+          "input": "4\n",
+          "expected": "hon\n"
+        },
+        {
+          "input": "5\n",
+          "expected": "hon\n"
+        },
+        {
+          "input": "6\n",
+          "expected": "pon\n"
+        },
+        {
+          "input": "7\n",
+          "expected": "hon\n"
+        },
+        {
+          "input": "8\n",
+          "expected": "pon\n"
+        },
+        {
+          "input": "9\n",
+          "expected": "hon\n"
+        },
+        {
+          "input": "10\n",
+          "expected": "pon\n"
+        },
+        {
+          "input": "11\n",
+          "expected": "pon\n"
+        },
+        {
+          "input": "12\n",
+          "expected": "hon\n"
+        },
+        {
+          "input": "13\n",
+          "expected": "bon\n"
+        },
+        {
+          "input": "14\n",
+          "expected": "hon\n"
+        },
+        {
+          "input": "15\n",
+          "expected": "hon\n"
+        },
+        {
+          "input": "17\n",
+          "expected": "hon\n"
+        },
+        {
+          "input": "18\n",
+          "expected": "pon\n"
+        },
+        {
+          "input": "19\n",
+          "expected": "hon\n"
+        },
+        {
+          "input": "20\n",
+          "expected": "pon\n"
+        },
+        {
+          "input": "90\n",
+          "expected": "pon\n"
+        },
+        {
+          "input": "91\n",
+          "expected": "pon\n"
+        },
+        {
+          "input": "92\n",
+          "expected": "hon\n"
+        },
+        {
+          "input": "93\n",
+          "expected": "bon\n"
+        },
+        {
+          "input": "94\n",
+          "expected": "hon\n"
+        },
+        {
+          "input": "95\n",
+          "expected": "hon\n"
+        },
+        {
+          "input": "96\n",
+          "expected": "pon\n"
+        },
+        {
+          "input": "97\n",
+          "expected": "hon\n"
+        },
+        {
+          "input": "98\n",
+          "expected": "pon\n"
+        },
+        {
+          "input": "99\n",
+          "expected": "hon\n"
+        },
+        {
+          "input": "100\n",
+          "expected": "pon\n"
+        },
+        {
+          "input": "990\n",
+          "expected": "pon\n"
+        },
+        {
+          "input": "991\n",
+          "expected": "pon\n"
+        },
+        {
+          "input": "992\n",
+          "expected": "hon\n"
+        },
+        {
+          "input": "993\n",
+          "expected": "bon\n"
+        },
+        {
+          "input": "994\n",
+          "expected": "hon\n"
+        },
+        {
+          "input": "995\n",
+          "expected": "hon\n"
+        },
+        {
+          "input": "996\n",
+          "expected": "pon\n"
+        },
+        {
+          "input": "997\n",
+          "expected": "hon\n"
+        },
+        {
+          "input": "998\n",
+          "expected": "pon\n"
+        },
+        {
+          "input": "999\n",
+          "expected": "hon\n"
+        },
+        {
+          "input": "702\n",
+          "expected": "hon\n"
+        },
+        {
+          "input": "905\n",
+          "expected": "hon\n"
+        },
+        {
+          "input": "895\n",
+          "expected": "hon\n"
+        },
+        {
+          "input": "770\n",
+          "expected": "pon\n"
+        },
+        {
+          "input": "881\n",
+          "expected": "pon\n"
+        },
+        {
+          "input": "41\n",
+          "expected": "pon\n"
+        },
+        {
+          "input": "72\n",
+          "expected": "hon\n"
+        },
+        {
+          "input": "813\n",
+          "expected": "bon\n"
+        },
+        {
+          "input": "644\n",
+          "expected": "hon\n"
+        },
+        {
+          "input": "826\n",
+          "expected": "pon\n"
+        },
+        {
+          "input": "81\n",
+          "expected": "pon\n"
+        },
+        {
+          "input": "847\n",
+          "expected": "hon\n"
+        },
+        {
+          "input": "115\n",
+          "expected": "hon\n"
+        },
+        {
+          "input": "878\n",
+          "expected": "pon\n"
+        },
+        {
+          "input": "231\n",
+          "expected": "pon\n"
+        },
+        {
+          "input": "987\n",
+          "expected": "hon\n"
+        },
+        {
+          "input": "638\n",
+          "expected": "pon\n"
+        },
+        {
+          "input": "386\n",
+          "expected": "pon\n"
+        },
+        {
+          "input": "269\n",
+          "expected": "hon\n"
+        },
+        {
+          "input": "453\n",
+          "expected": "bon\n"
+        },
+        {
+          "input": "782\n",
+          "expected": "hon\n"
+        },
+        {
+          "input": "528\n",
+          "expected": "pon\n"
+        },
+        {
+          "input": "144\n",
+          "expected": "hon\n"
+        },
+        {
+          "input": "538\n",
+          "expected": "pon\n"
+        },
+        {
+          "input": "749\n",
+          "expected": "hon\n"
+        },
+        {
+          "input": "719\n",
+          "expected": "hon\n"
+        },
+        {
+          "input": "311\n",
+          "expected": "pon\n"
+        },
+        {
+          "input": "892\n",
+          "expected": "hon\n"
+        },
+        {
+          "input": "156\n",
+          "expected": "pon\n"
+        },
+        {
+          "input": "345\n",
+          "expected": "hon\n"
+        },
+        {
+          "input": "354\n",
+          "expected": "hon\n"
+        },
+        {
+          "input": "260\n",
+          "expected": "pon\n"
+        },
+        {
+          "input": "162\n",
+          "expected": "hon\n"
+        },
+        {
+          "input": "943\n",
+          "expected": "bon\n"
+        },
+        {
+          "input": "846\n",
+          "expected": "pon\n"
+        },
+        {
+          "input": "667\n",
+          "expected": "hon\n"
+        },
+        {
+          "input": "124\n",
+          "expected": "hon\n"
+        }
+      ],
+      "tests_identity": "933c2429575fd7acc06bf9730316d5c688f0b032c08bf313c9d9c6a5ec6623a2"
+    },
+    "7a6f591c150851bd9c5f17577a1a259dc32889dc46132d8325c8fa36c54b5619": {
+      "status": "independently_checked",
+      "sample_id": "62222",
+      "domain_description": "10<=N<=99",
+      "pilot_coverage": "All valid two-digit integers, except original test",
+      "specification": {
+        "sample_id": "62222",
+        "task": "abc073_a",
+        "title": "September 9",
+        "url": "https://atcoder.jp/contests/abc073/tasks/abc073_a?lang=en",
+        "constraints": "10<=N<=99",
+        "pilot_coverage": "All valid two-digit integers, except original test",
+        "snapshot": "data/cache/task-statements/62222.html",
+        "sha256": "088ae6ba3ad3296b87b393a9cef6f510bd76b4a19438453a98d485d40df56345",
+        "retrieved_date": "2026-09-29",
+        "mapping_basis": "Exact official sample match and code/contract review. Task attribution is reconstructed, not supplied by authors.",
+        "mapping_review": "AI-assisted coordinator; independent human review pending"
+      },
+      "oracle_implementation": "src/prismqa/calibration_oracles.py",
+      "oracle_identity": "0d1f70d7afa402b5ea69209c44e285d5263715e4baf1f36d90dadd0415f05bd5",
+      "oracle_evidence": "Specification-derived oracle; exhaustive alternative searches where needed; official sample checked; no source/target calls.",
+      "reviewer": "AI-assisted coordinator, not an independent human reviewer",
+      "tests": [
+        {
+          "input": "10\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "11\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "12\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "13\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "14\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "15\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "16\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "17\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "18\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "19\n",
+          "expected": "Yes\n"
+        },
+        {
+          "input": "20\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "21\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "22\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "23\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "24\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "25\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "26\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "27\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "28\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "30\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "31\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "32\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "33\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "34\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "35\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "36\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "37\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "38\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "39\n",
+          "expected": "Yes\n"
+        },
+        {
+          "input": "40\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "41\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "42\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "43\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "44\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "45\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "46\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "47\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "48\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "49\n",
+          "expected": "Yes\n"
+        },
+        {
+          "input": "50\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "51\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "52\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "53\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "54\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "55\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "56\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "57\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "58\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "59\n",
+          "expected": "Yes\n"
+        },
+        {
+          "input": "60\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "61\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "62\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "63\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "64\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "65\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "66\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "67\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "68\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "69\n",
+          "expected": "Yes\n"
+        },
+        {
+          "input": "70\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "71\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "72\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "73\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "74\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "75\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "76\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "77\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "78\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "79\n",
+          "expected": "Yes\n"
+        },
+        {
+          "input": "80\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "81\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "82\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "83\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "84\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "85\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "86\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "87\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "88\n",
+          "expected": "No\n"
+        },
+        {
+          "input": "89\n",
+          "expected": "Yes\n"
+        },
+        {
+          "input": "90\n",
+          "expected": "Yes\n"
+        },
+        {
+          "input": "91\n",
+          "expected": "Yes\n"
+        },
+        {
+          "input": "92\n",
+          "expected": "Yes\n"
+        },
+        {
+          "input": "93\n",
+          "expected": "Yes\n"
+        },
+        {
+          "input": "94\n",
+          "expected": "Yes\n"
+        },
+        {
+          "input": "95\n",
+          "expected": "Yes\n"
+        },
+        {
+          "input": "96\n",
+          "expected": "Yes\n"
+        },
+        {
+          "input": "97\n",
+          "expected": "Yes\n"
+        },
+        {
+          "input": "98\n",
+          "expected": "Yes\n"
+        },
+        {
+          "input": "99\n",
+          "expected": "Yes\n"
+        }
+      ],
+      "tests_identity": "2c61a4eef5c2af84c981da53df421b46244c7d44d4967c63fbabbc2e955f2f1e"
+    },
+    "c4184ef45e6b04ff787461d45bacb919ea221f71ee14cfd56cb95dff94b00898": {
+      "status": "independently_checked",
+      "sample_id": "62549",
+      "domain_description": "1<=N<=200000; lowercase strings length 1..10",
+      "pilot_coverage": "N<=40; duplicate/all-distinct/prefix and length boundaries",
+      "specification": {
+        "sample_id": "62549",
+        "task": "abc164_c",
+        "title": "gacha",
+        "url": "https://atcoder.jp/contests/abc164/tasks/abc164_c?lang=en",
+        "constraints": "1<=N<=200000; lowercase strings length 1..10",
+        "pilot_coverage": "N<=40; duplicate/all-distinct/prefix and length boundaries",
+        "snapshot": "data/cache/task-statements/62549.html",
+        "sha256": "82ffc1591e724a31e2adcf5998f995875f66569e416eaa835f09501151756d12",
+        "retrieved_date": "2026-09-29",
+        "mapping_basis": "Exact official sample match and code/contract review. Task attribution is reconstructed, not supplied by authors.",
+        "mapping_review": "AI-assisted coordinator; independent human review pending"
+      },
+      "oracle_implementation": "src/prismqa/calibration_oracles.py",
+      "oracle_identity": "0d1f70d7afa402b5ea69209c44e285d5263715e4baf1f36d90dadd0415f05bd5",
+      "oracle_evidence": "Specification-derived oracle; exhaustive alternative searches where needed; official sample checked; no source/target calls.",
+      "reviewer": "AI-assisted coordinator, not an independent human reviewer",
+      "tests": [
+        {
+          "input": "1\na\n",
+          "expected": "1\n"
+        },
+        {
+          "input": "40\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\na\n",
+          "expected": "1\n"
+        },
+        {
+          "input": "4\na\naa\naaa\naaaaaaaaaa\n",
+          "expected": "4\n"
+        },
+        {
+          "input": "4\na\nb\na\nb\n",
+          "expected": "2\n"
+        },
+        {
+          "input": "11\ndbaaacdbcc\ndbcdbc\ndacb\nbabadbddbd\ndbcdbc\ndcbcd\ndbcdbc\naa\ndbaaacdbcc\ndbaaacdbcc\nda\n",
+          "expected": "7\n"
+        },
+        {
+          "input": "25\ndcaac\nbadbadabab\ndcacacddcd\naabcbbdd\naabcbbdd\na\nbbdabdbc\na\ndaca\nbbdabdbc\ncddb\ndcaac\nccbabba\nb\nddac\ndcacacddcd\nccbabba\nadaacabdac\nadaacabdac\ndcacacddcd\nb\ndcacacddcd\nb\nbbdabdbc\nbadbadabab\n",
+          "expected": "12\n"
+        },
+        {
+          "input": "9\nbaac\ncdaca\ncacd\nad\naacdcbc\ncdaca\nbda\naacdcbc\ndbdaca\n",
+          "expected": "7\n"
+        },
+        {
+          "input": "32\na\na\nccbbbbdbcc\ndddbda\nccbac\ncb\ndcbdba\ndadaadbba\nabbdad\nabbdad\ndb\ndb\ndadaadbba\nabccdccadd\ncb\na\ndb\ndddbda\nad\ndbcdca\nbbdc\nadca\nabacbbbaa\ndbcdca\ncb\nccbbbbdbcc\ndbcdca\nbacdacbab\nccbac\naccadd\ncb\nbacdacbab\n",
+          "expected": "17\n"
+        },
+        {
+          "input": "8\nbbbcb\nbbbcb\nbbbcb\nbbbcb\nbbbcb\nbbbcb\nbbbcb\nbbbcb\n",
+          "expected": "1\n"
+        },
+        {
+          "input": "36\naa\nc\nbaac\naa\ncc\nbaac\nadb\nbbcbbcab\nddc\naa\nbaac\ncc\ncc\nbcbba\naa\nddc\nddc\nbaac\nc\nddc\nadb\nbaac\nbaac\nbcbba\nbaac\nacaccbdbdd\nacbabac\nacaccbdbdd\nddc\nbcbba\nadb\nadb\nbbcbbcab\nbbcbbcab\nadb\nadb\n",
+          "expected": "10\n"
+        },
+        {
+          "input": "6\nbaacdc\nccccad\nbdccbbb\ncacb\ndddbd\ncbaaac\n",
+          "expected": "6\n"
+        },
+        {
+          "input": "9\ncabcdad\ndcaa\nadbc\nbaacadaada\nddcbaccd\nbcbbcaad\nbc\nddabb\nddabb\n",
+          "expected": "8\n"
+        },
+        {
+          "input": "20\ndcb\nc\nda\nda\ndac\nbdcbcbdcdd\ncb\ncbad\nbdcbcbdcdd\nbaddb\nd\nbdcbcbdcdd\nbaddb\nc\ncb\naac\nbaddb\nc\nda\ndac\n",
+          "expected": "10\n"
+        },
+        {
+          "input": "31\nd\nd\nabdddac\nabdddac\nabdddac\nd\nabdddac\nabdddac\nd\nd\nd\nd\nabdddac\nd\nd\nd\nd\nd\nabdddac\nabdddac\nd\nd\nabdddac\nabdddac\nabdddac\nabdddac\nabdddac\nabdddac\nd\nabdddac\nabdddac\n",
+          "expected": "2\n"
+        },
+        {
+          "input": "33\nd\nacaaddaa\nbcdaabdbdd\nacaaddaa\ndbcbdbaaa\nbcdaabdbdd\ndbcbdbaaa\nacaaddaa\nabbcccda\nacaaddaa\naddcdcabb\nabbcccda\nd\nacaaddaa\nddcacad\ndbcbdbaaa\nbc\nabbcccda\nacaaddaa\nabbcccda\nbcdaabdbdd\nbc\nddcacad\naddcdcabb\nbc\nabbcccda\nddcacad\naddcdcabb\nd\nd\ndbcbdbaaa\nabbcccda\naddcdcabb\n",
+          "expected": "8\n"
+        },
+        {
+          "input": "33\nbbccccb\nbbaddca\nc\nc\nc\nbbccccb\nbbccccb\nc\nc\nc\nbbaddca\nbbccccb\nbbaddca\nc\nc\nc\nc\nc\nc\nc\nc\nc\nbbccccb\nc\nbbccccb\nbbccccb\nc\nc\nc\nc\nbbccccb\nc\nbbccccb\n",
+          "expected": "3\n"
+        },
+        {
+          "input": "3\nbdbca\nbdbca\ncad\n",
+          "expected": "2\n"
+        },
+        {
+          "input": "19\nba\ndcacdcbdb\naca\ncbdcdacad\ndcabac\nbdbad\nba\nbdbad\ncbbcdcbbaa\nbbdbcba\nbbdbcba\nba\na\nbbdbcba\nbddbba\na\nbbdbcba\ndcabac\ndbcddb\n",
+          "expected": "11\n"
+        },
+        {
+          "input": "33\nbcdddccc\nbadacdccdc\nadbc\nadbc\na\na\nc\nbcdddccc\naadbaada\nbadacdccdc\naadbaada\nbcdddccc\nbadacdccdc\nbdbaacd\nbcdddccc\nbcdddccc\nd\nbcdddccc\nadbc\nbdbaacd\nc\nc\naadbaada\nc\nadbc\nd\nbdbaacd\nbcdddccc\nadbc\nc\naadbaada\nadbc\nbcdddccc\n",
+          "expected": "8\n"
+        },
+        {
+          "input": "29\nadb\ncbcbda\ndd\ncbcbda\ndbab\nad\ndbab\ncbbcd\naacacab\naacacab\ncbbcd\ndbab\nadb\naacacab\ncb\nad\nadcd\ndd\nadcd\ncbcbda\ndbab\nadcd\ncbbcd\nadb\ndbab\ncb\nc\ndd\nadcd\n",
+          "expected": "10\n"
+        },
+        {
+          "input": "18\nacbbb\naa\ncd\nddc\nbd\ncd\naccba\ncd\nbd\nacbbb\nddc\ndbdbbcddbd\ndbdbbcddbd\ncd\ndbdbbcddbd\naa\naa\nddc\n",
+          "expected": "7\n"
+        },
+        {
+          "input": "11\ndcc\naac\ndcbaccc\nabdbdcacbb\ndcc\nc\nb\nabdbdcacbb\ncbbccbadbc\naddbb\nbdacbbb\n",
+          "expected": "9\n"
+        },
+        {
+          "input": "9\ncacbd\ncd\ndaababd\ncd\nd\ncd\nbbbcddd\nbbbcddd\ncacbd\n",
+          "expected": "5\n"
+        },
+        {
+          "input": "26\ncbabdaabdc\ncbabdaabdc\ncbabdaabdc\ncbabdaabdc\ncbabdaabdc\ncbabdaabdc\ncbabdaabdc\ncbabdaabdc\ncbabdaabdc\ncbabdaabdc\ncbabdaabdc\ncbabdaabdc\ncbabdaabdc\ncbabdaabdc\ncbabdaabdc\ncbabdaabdc\ncbabdaabdc\ncbabdaabdc\ncbabdaabdc\ncbabdaabdc\ncbabdaabdc\ncbabdaabdc\ncbabdaabdc\ncbabdaabdc\ncbabdaabdc\ncbabdaabdc\n",
+          "expected": "1\n"
+        },
+        {
+          "input": "17\naacca\naacca\naacca\naacca\naacca\naacca\naacca\naacca\naacca\naacca\naacca\naacca\naacca\naacca\naacca\naacca\naacca\n",
+          "expected": "1\n"
+        },
+        {
+          "input": "22\ndbacd\nacbacd\nbdbdbdcab\nbdbdbdcab\nbbbdbaccc\nbbbdbaccc\ncbcb\naacddbbddd\ndbacd\ndabcbcd\ncbcb\nca\ncbcb\nbbbdbaccc\nbac\nbac\ndbacd\nbbbdbaccc\nbad\nbac\ndbacd\nbad\n",
+          "expected": "10\n"
+        },
+        {
+          "input": "14\naadcc\naadcc\naadcc\naadcc\naadcc\naadcc\naadcc\naadcc\naadcc\naadcc\naadcc\naadcc\naadcc\naadcc\n",
+          "expected": "1\n"
+        },
+        {
+          "input": "39\nccadbaa\nbbba\nbdbab\nca\nbcccada\ncacd\ncdbaccdb\nd\nbbba\ncaa\ncaa\naacaadd\nbccdad\ncdbaccdb\nbdadda\nbcccada\nbcccada\nbcccada\nca\ncdbaccdb\nccadbaa\ncdbaccdb\nbdbab\nca\nd\nbdbab\ncdbaccdb\ncdbaccdb\nbccdad\nccadbaa\nbcccada\ncaa\nda\nca\nda\nb\naacaadd\ncaa\ncaa\n",
+          "expected": "14\n"
+        },
+        {
+          "input": "23\naacc\naaa\ncddacbdd\nc\ndbbabc\ndbbabc\naacc\nadd\naacc\ncdddcaaad\ncddacbdd\nadd\nc\nc\nbabd\nbabd\ncddacbdd\ncddacbdd\naaa\naaa\naaa\naaa\nbabd\n",
+          "expected": "8\n"
+        },
+        {
+          "input": "13\ndbcab\nccc\nabbba\nd\nbcccbdbb\nd\nccc\nabbba\nccc\ndaddbcbcac\naaaddbbac\naaaddbbac\nabbba\n",
+          "expected": "7\n"
+        },
+        {
+          "input": "8\nbdbcaba\ncbcb\nbdbcaba\nbdbcaba\nbdbcaba\nb\ncbcb\nb\n",
+          "expected": "3\n"
+        },
+        {
+          "input": "19\nadb\naddbddabaa\ndd\nadacb\nd\nddcbd\nddccaabdda\ncacddcb\ncbcaabdcd\na\naddbddabaa\ndd\ndbdcc\nddcbd\nbc\ncacddcb\ncacddcb\na\ndbdcc\n",
+          "expected": "12\n"
+        },
+        {
+          "input": "17\ndcddadcdc\naaaa\ndcddadcdc\naabcccabba\naabcb\naabcb\nbdaddac\nddddadcbdd\ncdcb\nbdaddac\ndcdaab\nbdaddac\ndcdaab\ndcdaab\nbdaddac\ndacdcdbaad\ndacdcdbaad\n",
+          "expected": "9\n"
+        },
+        {
+          "input": "30\nacbccbbdba\ncabdcbaaab\ncabdcbaaab\nacbccbbdba\ndcc\ncabdcbaaab\na\nabddaaa\na\na\na\ndcc\na\ndc\na\nabddaaa\na\ndc\nacbccbbdba\ncabdcbaaab\nacbccbbdba\nacbccbbdba\nabddaaa\nabbddca\nabddaaa\ndc\nabddaaa\nabbddca\nacbccbbdba\ndc\n",
+          "expected": "7\n"
+        },
+        {
+          "input": "13\nbbabab\nbbabab\nbbabab\nbbabab\nbbabab\nbbabab\nbbabab\nbbabab\nbbabab\nbbabab\nbbabab\nbbabab\nbbabab\n",
+          "expected": "1\n"
+        },
+        {
+          "input": "13\naaccb\nab\ndaadc\naddb\nb\ndaadc\ncdbdc\ncdbdc\nab\nd\nb\naadcccdaad\nab\n",
+          "expected": "8\n"
+        },
+        {
+          "input": "36\nbccdcdddbc\nbccdcdddbc\nbc\nddbacbadac\ndcbb\nbbdccd\nacdcdd\nbbbbaccaab\ncacdacadb\ndd\nbbdccd\ndccdbdbbcb\nbccdcdddbc\nb\ndcbb\nb\ncacdacadb\ncacdacadb\nbccdcdddbc\nb\nb\ndccdbdbbcb\nacdcdd\nb\nbbdccd\nbbcdaaac\ncacdacadb\nbbdccd\ndccdbdbbcb\nbbdccd\ncacdb\nb\nbccdcdddbc\nacdcdd\ncacdacadb\ncacdacadb\n",
+          "expected": "13\n"
+        },
+        {
+          "input": "40\nbdbddd\nbacacbba\nbacacbba\nbdbddd\nbacacbba\nbaabdabbc\nbdbddd\nbaabdabbc\nbacacbba\nbacacbba\nbaabdabbc\nbdbddd\nbacacbba\nbdbddd\nbdbddd\nbaabdabbc\nbdbddd\nbacacbba\nbaabdabbc\nbdbddd\nbaabdabbc\nbacacbba\nbaabdabbc\nbaabdabbc\nbaabdabbc\nbdbddd\nbdbddd\nbacacbba\nbacacbba\nbdbddd\nbdbddd\nbaabdabbc\nbacacbba\nbacacbba\nbacacbba\nbacacbba\nbaabdabbc\nbacacbba\nbaabdabbc\nbaabdabbc\n",
+          "expected": "3\n"
+        },
+        {
+          "input": "17\nac\ncca\ndbacc\nbcabadaab\ndcbcc\nccbbad\nac\ndcbcc\ncca\nccbbad\ndcbcc\nbcbddca\nbab\nac\nac\ndccaabbabd\ndccaabbabd\n",
+          "expected": "9\n"
+        },
+        {
+          "input": "32\nacabdbbbaa\nc\nbacada\ncbda\nacabdbbbaa\nacabdbbbaa\nbacada\nbacada\nc\nbacada\nc\ncbda\nbacada\ncbda\nc\nc\ncbda\nc\nacabdbbbaa\nbacada\nacabdbbbaa\nacabdbbbaa\ncbda\nc\nbacada\nc\nbacada\nbacada\nc\nc\ncbda\nc\n",
+          "expected": "4\n"
+        }
+      ],
+      "tests_identity": "fdca529856564ccafe36b6c2ce5693dd7305bc3fa6df066789c6fb8d697bf9dc"
+    }
+  }
+}

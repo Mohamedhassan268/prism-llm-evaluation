@@ -1,0 +1,12 @@
+{
+  "version": "calibration-baseline-strict-v1",
+  "comparator": "strict-exact-v1",
+  "grading_status": "reconstructed",
+  "human_review": {
+    "protocol": "approved",
+    "samples": "approved",
+    "frozen_design": "pending"
+  },
+  "review_basis": "User: next is what start it; 2026-09-29",
+  "domains": {}
+}

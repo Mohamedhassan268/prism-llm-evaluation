@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prism-paper-qa"
+version = "0.1.0"
+description = "Auditable, local PRISM paper evaluation harness"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+qa = ["pytest>=8", "hypothesis>=6", "ruff>=0.8", "bandit>=1.8"]
+prompts = ["pyspellchecker>=0.8", "textstat>=0.7"]
+embeddings = ["sentence-transformers>=3"]
+
+[project.scripts]
+prismqa = "prismqa.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+markers = ["container: requires local Docker and the pinned toolchain image"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]

@@ -1,0 +1,30 @@
+{
+  "checked_on": "2026-10-06",
+  "kind": "aggregate_release_summary",
+  "code_calibration": {
+    "saved_output_rows": 330,
+    "models": 11,
+    "source_target_pairs": 10,
+    "evaluation_conditions": 3,
+    "extraction_successes": 265,
+    "compilation_successes": 106,
+    "supplied_test_passes": 71,
+    "supplied_passes_passing_additional_cases": 69,
+    "newly_exposed_false_passes": 2,
+    "problems_with_newly_exposed_false_passes": 1,
+    "source_control_additional_cases_passed": 601,
+    "fresh_generation": false,
+    "heldout_target_grading_complete": false
+  },
+  "prompt_pilot": {
+    "synthetic_tasks": 12,
+    "planned_requests": 48,
+    "collected_responses": 40,
+    "unique_task_variant_identities": 40,
+    "exact_frozen_request_matches": 40,
+    "recorded_model": "qwen35-4b-q4km-e87f1764",
+    "complete": false,
+    "effect_estimate_claimed": false
+  },
+  "evidence_limit": "Counts were checked against local artifacts. Raw responses, benchmark code and full research reports are not distributed in this release. These descriptive counts are not a general correctness or prompt-effect estimate."
+}
