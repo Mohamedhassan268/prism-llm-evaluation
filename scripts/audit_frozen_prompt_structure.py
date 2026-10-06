@@ -18,8 +18,7 @@ def main():
             raise ValueError("Pinned prompt artifact changed")
     if any("language" in item for item in original):
         raise ValueError("Unexpected prior language declarations; inspect before applying overlay")
-    # und means undetermined, not an assertion that the text is non-English.
-    # The existing auditor excludes it from English-only measurements.
+    # 'und' excludes records from English-only metrics without assigning a language.
     annotated = [{**item, "language": "und"} for item in original]
     report = audit_prompts(annotated, profile="extension")
     output = {

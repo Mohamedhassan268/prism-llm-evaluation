@@ -11,8 +11,7 @@ LANGUAGES = ("C", "C++", "Go", "Java", "Python")
 
 
 def program_group(record: dict) -> str:
-    # A verified original-problem identity takes precedence. Exact source hashes are a
-    # fallback only; distinct source implementations may represent the same problem.
+    # Prefer verified problem IDs; source hashes do not establish problem-disjointness.
     return record.get("verified_problem_id") or text_hash(record["source_code"])
 
 

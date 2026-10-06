@@ -36,8 +36,7 @@ def diagnose(pair: str, expected: str, execution: dict) -> str:
         return "stdout_contract_violation"
     if INTEGER.fullmatch(actual):
         return "format_difference" if int(actual) == int(expected) else "functional_value_mismatch"
-    # An equal decimal representation violates an integer-only stdout contract,
-    # but does not establish an incorrect mathematical answer.
+    # Equal decimal values may fail the integer format contract without a value error.
     try:
         if Decimal(actual) == Decimal(expected):
             return "numeric_representation_difference"

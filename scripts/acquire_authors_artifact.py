@@ -1,8 +1,4 @@
-"""Acquire pinned authors' artifacts without executing their code.
-
-Uses standard-library HTTPS only. Existing originals are verified, never replaced.
-The ZIP is inspected rather than automatically extracted.
-"""
+"""Acquire and verify pinned artifacts without executing or extracting them."""
 
 from __future__ import annotations
 

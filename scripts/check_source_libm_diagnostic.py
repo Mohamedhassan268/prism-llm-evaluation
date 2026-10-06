@@ -33,8 +33,7 @@ def main():
             raise ValueError("This diagnostic supports the selected C source only")
         return name, [*compiler, "-lm"], executable
 
-    # A separate process-local override changes only this diagnostic's command.
-    # It never edits runner.py, the image, the source, or an existing record/profile.
+    # Keep this compiler override separate from frozen run profiles.
     runner.language_commands = libm_commands
     try:
         result = runner.ContainerRunner(ROOT).run_program(

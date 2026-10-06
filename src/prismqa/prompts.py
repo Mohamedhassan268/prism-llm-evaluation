@@ -136,11 +136,7 @@ def _fenced_prompts(text: str) -> list[str]:
 def load_prompt_records(
     path: str | Path, *, metadata: dict | None = None, adapter: str | None = None
 ) -> list[dict]:
-    """Load JSON/JSONL; TXT/Markdown require an explicit extraction adapter.
-
-    Metadata supplies shared provenance. A record's values take precedence.
-    No Markdown/TXT content is inferred to be a prompt without an adapter.
-    """
+    """Load prompts; plain text requires an adapter and record metadata overrides defaults."""
     source = Path(path)
     shared = dict(metadata or {})
     suffix = source.suffix.lower()
@@ -469,12 +465,7 @@ def _similarity(assessments: list[dict], embeddings: Any) -> dict:
 def audit_prompts(
     records: list[dict], *, profile: str = "baseline", embeddings: Any = None
 ) -> dict:
-    """Measure prompt maintenance; preserve raw text and make exclusions visible.
-
-    Baseline and extension profiles share the paper-aligned descriptive metrics.
-    Contract/provenance checks are explicitly labeled extensions in both profiles.
-    Optional tools run locally if installed; this function never downloads models.
-    """
+    """Audit raw prompts with explicit exclusions; optional models must be installed locally."""
     if profile not in SUPPORTED_PROFILES:
         raise PromptValidationError(f"Unknown prompt profile: {profile}")
     validate_prompt_records(records)

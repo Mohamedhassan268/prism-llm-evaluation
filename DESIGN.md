@@ -1,51 +1,25 @@
-# Design and decisions
+# Design
 
-## Goals and architecture
+## Evaluation pipeline
 
-Preserve a traceable chain from source and immutable artifact to sample, profile, execution,
-outcome and report. Keep extraction, compilation, original tests and additional tests separate.
-The Python CLI coordinates trusted modules; Docker alone executes generated benchmark code.
-Static prompt audits never execute prompt contents or make model calls.
+Source artifact -> sample -> frozen profile -> extraction -> execution -> outcomes -> report.
 
-## Key decisions and alternatives
+The CLI coordinates trusted Python modules. Docker executes generated benchmark code. Extraction, compilation, supplied tests and additional cases are graded separately; static prompt audits make no model calls.
 
-Hashes bind datasets, profiles and environments to runs. Atomic records allow interrupted
-runs to resume. Report generation checks completeness and recomputes counts rather than
-trusting a summary. Exact stdout and strip comparators are separate reconstructed profiles.
-The recovered author regex intentionally chooses the first match; the new conservative profile
-rejects ambiguity. Algorithm repair would change the tested artifact and is excluded.
+Hashes bind artifacts, profiles and environments to each run. Atomic records support resumption. Reports verify completeness and recompute counts. Recovered author regex selects the first match; the conservative profile rejects ambiguity. Neither repairs the tested algorithm.
 
-Reference programs are execution comparators after domain and expected-value checks. They
-are not automatically correct oracles. Extra-test claims exclude incomplete references and
-oracle disagreements. A crash, timeout or environment failure is distinct from wrong output.
-Cluster bootstrap intervals require at least two eligible source groups; fixture rates are
-only harness demonstrations. Original problem identities are unavailable in the acquired CSV.
+Reference programs require reviewed domains and expected values. Incomplete references and oracle disagreements cannot support extra-test claims. Crashes, timeouts and environment failures remain separate from wrong outputs. Bootstrap intervals need at least two eligible source groups.
 
-## Security and resource boundaries
+## Execution boundary
 
-The executor runs as UID 1000, with no networking, a read-only root, dropped capabilities,
-no new privileges, 1 CPU, 1 GiB memory, 64 processes and bounded writable tmpfs mounts.
-Only one read-only job folder is bound from the host. Expected answers are not mounted.
-Compilation is capped at 30 seconds, each execution at 5 seconds, and each program batch
-at 120 seconds. File output is limited to 32 MiB; JSON diagnostics are truncated while the
-full stdout hash supports exact comparisons. Surviving process groups are killed after a case.
-No more than two benchmark jobs should run concurrently; current CLI executes sequentially.
-This is an isolation boundary for this local study, not a proof against all container escapes.
+The container uses UID 1000, disabled networking, a read-only root/source mount, dropped capabilities and no new privileges. Limits: 1 CPU, 1 GiB RAM, 64 processes, bounded tmpfs and 32 MiB file output. Expected answers are not mounted.
 
-Python subprocess arguments are lists, with no shell evaluation. Runner executable prefixes
-and image identities are validated. Job paths cannot escape the project. Retrieved scripts
-and prompts remain data; external skill instructions are audited rather than blindly installed.
+Compilation allows 30 seconds, each case 5 seconds and a program batch 120 seconds. Surviving process groups are killed between cases. Diagnostics are truncated; full stdout hashes support comparisons. The CLI runs benchmark jobs sequentially.
 
-## Known limitations and tradeoffs
+Subprocess commands use argument lists. Executable prefixes, image identities and job paths are validated. Rebuilding the image changes its identity and invalidates an existing run's resumption.
 
-Original graders, source constraints and complete Track B artifacts were not recovered.
-The current prompt sample is contemporary and covers a collection only. Embedding analysis
-is optional and has not run. Generic scanner thresholds are suggestions rather than research
-oracles. Changing the Docker image invalidates resumption; do not rebuild during a run.
-Dependency locks capture the tested environment, but base apt package resolution is not a
-historical snapshot. Container image IDs preserve the actual resulting toolchain locally.
+## Limits
 
-## Change history
+Original graders, complete source constraints and the authors' Track B corpus were not recovered. Source hashes cannot establish problem-disjointness across different implementations. The current prompt sample covers one contemporary collection; embedding analysis has not run.
 
-2026-09-29: initial protocol, artifact audit, bounded toolchains, harness, synthetic controls,
-identity-checked resumption/reporting, prompt maintenance implementation and local skill draft.
+Dependency locks describe the tested environment, but apt resolution is not a historical snapshot. Container boundaries are practical controls, not a formal isolation guarantee.

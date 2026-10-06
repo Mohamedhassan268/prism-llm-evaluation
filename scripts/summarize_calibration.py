@@ -191,7 +191,6 @@ def main():
         "",
     ]
     (ROOT / "reports/CALIBRATION_CHECKPOINT.md").write_text("\n".join(lines), encoding="utf-8")
-    # Preserve project-generated manifests/results; raw author code stays in local runs/cache.
     for name in ("calibration-source-baseline", "calibration-source-extended"):
         destination = ROOT / "reports/evidence" / name
         destination.mkdir(parents=True, exist_ok=True)
